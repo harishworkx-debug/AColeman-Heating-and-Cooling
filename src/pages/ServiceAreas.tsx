@@ -75,7 +75,7 @@ export default function ServiceAreas() {
                   })}
                 </div>
                 <Link
-                  to={`/${location.slug}`}
+                  to={`/air-conditioning-repair-${location.slug}`}
                   className="inline-flex items-center gap-2 text-coolblue-700 font-semibold text-sm hover:gap-3 transition-all"
                 >
                   View {location.name} Service Area

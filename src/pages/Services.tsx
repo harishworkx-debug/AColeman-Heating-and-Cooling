@@ -102,7 +102,7 @@ export default function Services() {
                           {service.shortDescription}
                         </p>
                         <Link
-                          to={`/${service.slug}`}
+                          to={`/${service.slug}-waukegan-il`}
                           className="inline-flex items-center gap-1.5 text-coolblue-700 font-semibold text-sm hover:gap-2.5 transition-all"
                         >
                           {service.cta}

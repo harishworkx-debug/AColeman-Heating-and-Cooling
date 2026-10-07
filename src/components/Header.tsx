@@ -18,13 +18,13 @@ import {
 import { BUSINESS, SERVICES, LOCATIONS } from '@/data/business';
 
 const serviceLinks = SERVICES.map((s) => ({
-  to: `/${s.slug}`,
+  to: `/${s.slug}-waukegan-il`,
   label: s.shortName,
   icon: s.icon,
 }));
 
 const areaLinks = LOCATIONS.map((l) => ({
-  to: `/${l.slug}`,
+  to: `/air-conditioning-repair-${l.slug}`,
   label: `${l.name}, ${l.state}`,
 }));
 
@@ -155,32 +155,34 @@ export default function Header() {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-[440px] max-h-[420px] overflow-y-auto bg-white rounded-2xl shadow-2xl shadow-navy-900/10 border border-gray-100 p-3 animate-slide-down">
-                    <div className="grid grid-cols-2 gap-1">
-                      {serviceLinks.map((svc) => {
-                        const Icon = iconMap[svc.icon] || Wrench;
-                        return (
-                          <Link
-                            key={svc.to}
-                            to={svc.to}
-                            className="flex items-start gap-2.5 p-3 rounded-xl hover:bg-navy-50 transition-colors group"
-                          >
-                            <div className="w-8 h-8 rounded-lg bg-navy-100 flex items-center justify-center shrink-0 group-hover:bg-coolblue-100 transition-colors">
-                              <Icon className="w-4 h-4 text-navy-600 group-hover:text-coolblue-700" />
-                            </div>
-                            <span className="text-sm font-medium text-navy-700 group-hover:text-navy-900 pt-1.5">
-                              {svc.label}
-                            </span>
-                          </Link>
-                        );
-                      })}
+                  <div className="absolute top-full left-0 pt-2 w-[440px]">
+                    <div className="max-h-[420px] overflow-y-auto bg-white rounded-2xl shadow-2xl shadow-navy-900/10 border border-gray-100 p-3 animate-slide-down">
+                      <div className="grid grid-cols-2 gap-1">
+                        {serviceLinks.map((svc) => {
+                          const Icon = iconMap[svc.icon] || Wrench;
+                          return (
+                            <Link
+                              key={svc.to}
+                              to={svc.to}
+                              className="flex items-start gap-2.5 p-3 rounded-xl hover:bg-navy-50 transition-colors group"
+                            >
+                              <div className="w-8 h-8 rounded-lg bg-navy-100 flex items-center justify-center shrink-0 group-hover:bg-coolblue-100 transition-colors">
+                                <Icon className="w-4 h-4 text-navy-600 group-hover:text-coolblue-700" />
+                              </div>
+                              <span className="text-sm font-medium text-navy-700 group-hover:text-navy-900 pt-1.5">
+                                {svc.label}
+                              </span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                      <Link
+                        to="/services"
+                        className="block mt-2 py-2.5 text-center text-sm font-semibold text-coolblue-700 hover:bg-coolblue-50 rounded-xl transition-colors"
+                      >
+                        View All Services →
+                      </Link>
                     </div>
-                    <Link
-                      to="/services"
-                      className="block mt-2 py-2.5 text-center text-sm font-semibold text-coolblue-700 hover:bg-coolblue-50 rounded-xl transition-colors"
-                    >
-                      View All Services →
-                    </Link>
                   </div>
                 )}
               </div>
@@ -204,23 +206,25 @@ export default function Header() {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${areasOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {areasOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-64 max-h-[380px] overflow-y-auto bg-white rounded-2xl shadow-2xl shadow-navy-900/10 border border-gray-100 p-3 animate-slide-down">
-                    {areaLinks.map((area) => (
+                  <div className="absolute top-full left-0 pt-2 w-64">
+                    <div className="max-h-[380px] overflow-y-auto bg-white rounded-2xl shadow-2xl shadow-navy-900/10 border border-gray-100 p-3 animate-slide-down">
+                      {areaLinks.map((area) => (
+                        <Link
+                          key={area.to}
+                          to={area.to}
+                          className="flex items-center gap-2.5 p-3 rounded-xl hover:bg-navy-50 transition-colors"
+                        >
+                          <MapPin className="w-4 h-4 text-coolblue-600" />
+                          <span className="text-sm font-medium text-navy-700">{area.label}</span>
+                        </Link>
+                      ))}
                       <Link
-                        key={area.to}
-                        to={area.to}
-                        className="flex items-center gap-2.5 p-3 rounded-xl hover:bg-navy-50 transition-colors"
+                        to="/service-areas"
+                        className="block mt-2 py-2.5 text-center text-sm font-semibold text-coolblue-700 hover:bg-coolblue-50 rounded-xl transition-colors"
                       >
-                        <MapPin className="w-4 h-4 text-coolblue-600" />
-                        <span className="text-sm font-medium text-navy-700">{area.label}</span>
+                        View All Service Areas →
                       </Link>
-                    ))}
-                    <Link
-                      to="/service-areas"
-                      className="block mt-2 py-2.5 text-center text-sm font-semibold text-coolblue-700 hover:bg-coolblue-50 rounded-xl transition-colors"
-                    >
-                      View All Service Areas →
-                    </Link>
+                    </div>
                   </div>
                 )}
               </div>

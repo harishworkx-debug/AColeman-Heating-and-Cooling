@@ -283,7 +283,7 @@ export default function Home() {
                       {service.shortDescription}
                     </p>
                     <Link
-                      to={`/${service.slug}`}
+                      to={`/${service.slug}-waukegan-il`}
                       className="inline-flex items-center gap-1.5 text-coolblue-700 font-semibold text-sm hover:gap-2.5 transition-all"
                     >
                       {service.cta}
@@ -339,7 +339,7 @@ export default function Home() {
                 ))}
               </div>
               <Link
-                to="/heating-repair"
+                to="/heating-repair-waukegan-il"
                 className="inline-flex items-center gap-2 bg-warmorange-500 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-warmorange-600 transition-all duration-300 shadow-lg shadow-warmorange-500/25 hover:-translate-y-0.5"
               >
                 Get Heating Service
@@ -392,7 +392,7 @@ export default function Home() {
                 ))}
               </div>
               <Link
-                to="/air-conditioning-repair"
+                to="/air-conditioning-repair-waukegan-il"
                 className="inline-flex items-center gap-2 bg-coolblue-600 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-coolblue-700 transition-all duration-300 shadow-lg shadow-coolblue-600/25 hover:-translate-y-0.5"
               >
                 Get AC Service
@@ -485,7 +485,7 @@ export default function Home() {
       {/* Reviews section */}
       <section className="section-pad bg-white">
         <div className="container-xl">
-          <div className="text-center max-w-2xl mx-auto mb-10">
+          <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="inline-block px-4 py-1.5 rounded-full bg-coolblue-100 text-coolblue-800 text-sm font-semibold mb-4">
               Customer Reviews
             </span>
@@ -493,18 +493,55 @@ export default function Home() {
               See What Customers Are Saying
             </h2>
             <p className="text-navy-600 leading-relaxed">
-              We encourage you to read genuine customer reviews on Google to learn about other customers' experiences with AColeman Heating and Cooling.
+              We take pride in our work and it shows. Here's what some of our customers have to say about their experience with AColeman Heating and Cooling.
             </p>
           </div>
-          <div className="max-w-2xl mx-auto text-center bg-navy-50 rounded-2xl p-8 md:p-10">
-            <div className="flex items-center justify-center gap-1.5 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 text-warmorange-500 fill-warmorange-500" />
-              ))}
-            </div>
-            <p className="text-navy-700 text-lg leading-relaxed mb-6">
-              Read real customer reviews on our Google Business listing to see what people say about working with AColeman Heating and Cooling.
-            </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                name: 'Angelica Montemayor',
+                text: 'Great service!! Jamie, the owner, is bilingual and has serviced my home and all of my rentals for years. His professionalism and quality of work is unmatched, I definitely recommend. Available for emergency services and after hours.',
+              },
+              {
+                name: 'Jeff K',
+                text: 'Was able to come out at last minute notice, diagnosed my issue, explained what was wrong clearly and concisely and had my Hvac up and running the same day.',
+              },
+              {
+                name: 'James Slay',
+                text: 'Very professional did outstanding job repairing the sensor on my furnace. Very fair price.',
+              },
+              {
+                name: 'Marshall',
+                text: 'Excellent service and quality electrical work. Jaime installed ceiling fans, light fixtures, wall outlets and switches in a timely manner. He cares about his work and is very knowledgeable. Highly recommend him.',
+              },
+              {
+                name: 'Jason F',
+                text: 'Jamie did fantastic work. He knew exactly what was wrong and rewired a few things quickly and correctly. I highly recommend!',
+              },
+              {
+                name: 'Nrynds Glrt Lrs',
+                text: 'A kind and respectful person. He did excellent work and good warranty. 100% recommended.',
+              }
+            ].map((review, i) => (
+              <div key={i} className="bg-navy-50 rounded-2xl p-6 md:p-8 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} className="w-5 h-5 text-warmorange-500 fill-warmorange-500" />
+                  ))}
+                </div>
+                <p className="text-navy-700 leading-relaxed mb-6 flex-grow">
+                  "{review.text}"
+                </p>
+                <div className="flex items-center justify-between mt-auto">
+                  <div className="font-semibold text-navy-900">{review.name}</div>
+                  <svg className="w-6 h-6 text-coolblue-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
             <a
               href={BUSINESS.mapsLink}
               target="_blank"
@@ -512,7 +549,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-navy-800 transition-all duration-300 shadow-lg hover:-translate-y-0.5"
             >
               <MapPin className="w-4 h-4" />
-              View Reviews on Google
+              View More on Google
             </a>
           </div>
         </div>
