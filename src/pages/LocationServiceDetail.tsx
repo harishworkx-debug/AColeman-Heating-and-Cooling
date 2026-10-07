@@ -29,12 +29,20 @@ const iconMap: Record<string, typeof Flame> = {
   RefreshCw,
 };
 
-export default function LocationServiceDetail() {
-  const { locationSlug, serviceSlug } = useParams<{
+export default function LocationServiceDetail({ 
+  resolvedLocationSlug, 
+  resolvedServiceSlug 
+}: { 
+  resolvedLocationSlug?: string;
+  resolvedServiceSlug?: string;
+}) {
+  const params = useParams<{
     locationSlug: string;
     serviceSlug: string;
   }>();
-
+  
+  const locationSlug = resolvedLocationSlug || params.locationSlug;
+  const serviceSlug = resolvedServiceSlug || params.serviceSlug;
   const location = LOCATIONS.find((l) => l.slug === locationSlug);
   const service = SERVICES.find((s) => s.slug === serviceSlug);
 
@@ -80,7 +88,7 @@ export default function LocationServiceDetail() {
       <SEO
         title={`${service.name} in ${location.name}, ${location.state} | ${BUSINESS.name}`}
         description={`${service.metaDescription} Serving ${location.name}, ${location.state}. Call ${BUSINESS.phone}.`}
-        canonicalPath={`/service-areas/${location.slug}/${service.slug}`}
+        canonicalPath={`/${service.slug}-${location.slug}`}
         ogImage={service.image}
         structuredData={structuredData}
       />
@@ -102,7 +110,7 @@ export default function LocationServiceDetail() {
               crumbs={[
                 { label: 'Home', path: '/' },
                 { label: 'Service Areas', path: '/service-areas' },
-                { label: `${location.name}, ${location.state}`, path: `/service-areas/${location.slug}` },
+                { label: `${location.name}, ${location.state}`, path: `/${location.slug}` },
                 { label: service.shortName },
               ]}
             />

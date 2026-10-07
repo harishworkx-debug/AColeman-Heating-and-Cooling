@@ -18,13 +18,13 @@ import {
 import { BUSINESS, SERVICES, LOCATIONS } from '@/data/business';
 
 const serviceLinks = SERVICES.map((s) => ({
-  to: `/services/${s.slug}`,
+  to: `/${s.slug}`,
   label: s.shortName,
   icon: s.icon,
 }));
 
 const areaLinks = LOCATIONS.map((l) => ({
-  to: `/service-areas/${l.slug}`,
+  to: `/${l.slug}`,
   label: `${l.name}, ${l.state}`,
 }));
 
@@ -137,7 +137,12 @@ export default function Header() {
               </Link>
 
               {/* Services dropdown */}
-              <div ref={servicesRef} className="relative">
+              <div 
+                ref={servicesRef} 
+                className="relative"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
                 <button
                   onClick={() => { setServicesOpen(!servicesOpen); setAreasOpen(false); }}
                   className={`flex items-center gap-1 px-3 py-2 rounded-lg font-medium text-sm transition-colors ${
@@ -181,7 +186,12 @@ export default function Header() {
               </div>
 
               {/* Service Areas dropdown */}
-              <div ref={areasRef} className="relative">
+              <div 
+                ref={areasRef} 
+                className="relative"
+                onMouseEnter={() => setAreasOpen(true)}
+                onMouseLeave={() => setAreasOpen(false)}
+              >
                 <button
                   onClick={() => { setAreasOpen(!areasOpen); setServicesOpen(false); }}
                   className={`flex items-center gap-1 px-3 py-2 rounded-lg font-medium text-sm transition-colors ${

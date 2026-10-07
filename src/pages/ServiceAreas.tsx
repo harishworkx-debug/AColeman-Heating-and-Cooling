@@ -63,7 +63,7 @@ export default function ServiceAreas() {
                     return (
                       <Link
                         key={svcSlug}
-                        to={`/service-areas/${location.slug}/${svcSlug}`}
+                        to={`/${svcSlug}-${location.slug}`}
                         className="flex items-center gap-2 p-3 rounded-lg bg-navy-50 hover:bg-coolblue-50 transition-colors group"
                       >
                         <span className="text-sm font-medium text-navy-700 group-hover:text-coolblue-700">
@@ -75,7 +75,7 @@ export default function ServiceAreas() {
                   })}
                 </div>
                 <Link
-                  to={`/service-areas/${location.slug}`}
+                  to={`/${location.slug}`}
                   className="inline-flex items-center gap-2 text-coolblue-700 font-semibold text-sm hover:gap-3 transition-all"
                 >
                   View {location.name} Service Area

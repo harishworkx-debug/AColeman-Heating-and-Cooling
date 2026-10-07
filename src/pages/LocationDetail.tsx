@@ -12,8 +12,9 @@ const iconMap: Record<string, typeof Flame> = {
   Wrench,
 };
 
-export default function LocationDetail() {
-  const { locationSlug } = useParams<{ locationSlug: string }>();
+export default function LocationDetail({ resolvedSlug }: { resolvedSlug?: string }) {
+  const params = useParams<{ locationSlug: string }>();
+  const locationSlug = resolvedSlug || params.locationSlug;
   const location = LOCATIONS.find((l) => l.slug === locationSlug);
 
   if (!location) {
@@ -40,7 +41,7 @@ export default function LocationDetail() {
       <SEO
         title={`HVAC Services in ${location.name}, ${location.state} | ${BUSINESS.name}`}
         description={`AColeman Heating and Cooling provides heating repair, AC repair, and HVAC maintenance in ${location.name}, ${location.state}. Call ${BUSINESS.phone}.`}
-        canonicalPath={`/service-areas/${location.slug}`}
+        canonicalPath={`/${location.slug}`}
         structuredData={{
           '@type': 'Service',
           name: `HVAC Services in ${location.name}, ${location.state}`,
@@ -129,7 +130,7 @@ export default function LocationDetail() {
                       {service.shortDescription}
                     </p>
                     <Link
-                      to={`/service-areas/${location.slug}/${service.slug}`}
+                      to={`/${service.slug}-${location.slug}`}
                       className="inline-flex items-center gap-1.5 text-coolblue-700 font-semibold text-sm hover:gap-2.5 transition-all"
                     >
                       {service.name} in {location.name}

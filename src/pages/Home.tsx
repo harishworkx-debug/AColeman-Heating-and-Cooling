@@ -283,7 +283,7 @@ export default function Home() {
                       {service.shortDescription}
                     </p>
                     <Link
-                      to={`/services/${service.slug}`}
+                      to={`/${service.slug}`}
                       className="inline-flex items-center gap-1.5 text-coolblue-700 font-semibold text-sm hover:gap-2.5 transition-all"
                     >
                       {service.cta}
@@ -339,7 +339,7 @@ export default function Home() {
                 ))}
               </div>
               <Link
-                to="/services/heating-repair"
+                to="/heating-repair"
                 className="inline-flex items-center gap-2 bg-warmorange-500 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-warmorange-600 transition-all duration-300 shadow-lg shadow-warmorange-500/25 hover:-translate-y-0.5"
               >
                 Get Heating Service
@@ -392,7 +392,7 @@ export default function Home() {
                 ))}
               </div>
               <Link
-                to="/services/air-conditioning-repair"
+                to="/air-conditioning-repair"
                 className="inline-flex items-center gap-2 bg-coolblue-600 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-coolblue-700 transition-all duration-300 shadow-lg shadow-coolblue-600/25 hover:-translate-y-0.5"
               >
                 Get AC Service

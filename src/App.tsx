@@ -6,6 +6,7 @@ import ServiceDetail from '@/pages/ServiceDetail';
 import ServiceAreas from '@/pages/ServiceAreas';
 import LocationDetail from '@/pages/LocationDetail';
 import LocationServiceDetail from '@/pages/LocationServiceDetail';
+import DynamicRoute from '@/pages/DynamicRoute';
 import About from '@/pages/About';
 import FAQs from '@/pages/FAQs';
 import Contact from '@/pages/Contact';
@@ -17,13 +18,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/service-areas" element={<ServiceAreas />} />
-        <Route path="/service-areas/:locationSlug" element={<LocationDetail />} />
-        <Route
-          path="/service-areas/:locationSlug/:serviceSlug"
-          element={<LocationServiceDetail />}
-        />
+        <Route path="/:slug" element={<DynamicRoute />} />
         <Route path="/about" element={<About />} />
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/contact" element={<Contact />} />

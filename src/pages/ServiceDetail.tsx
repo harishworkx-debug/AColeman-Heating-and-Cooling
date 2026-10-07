@@ -28,8 +28,9 @@ const iconMap: Record<string, typeof Flame> = {
   RefreshCw,
 };
 
-export default function ServiceDetail() {
-  const { slug } = useParams<{ slug: string }>();
+export default function ServiceDetail({ resolvedSlug }: { resolvedSlug?: string }) {
+  const params = useParams<{ slug: string }>();
+  const slug = resolvedSlug || params.slug;
   const service = SERVICES.find((s) => s.slug === slug);
 
   if (!service) {
@@ -77,7 +78,7 @@ export default function ServiceDetail() {
       <SEO
         title={service.titleTag}
         description={service.metaDescription}
-        canonicalPath={`/services/${service.slug}`}
+        canonicalPath={`/${service.slug}`}
         ogImage={service.image}
         structuredData={structuredData}
       />
@@ -286,7 +287,7 @@ export default function ServiceDetail() {
                 return (
                   <Link
                     key={rel.slug}
-                    to={`/services/${rel.slug}`}
+                    to={`/${rel.slug}`}
                     className="card group p-6"
                   >
                     <div className="flex items-center gap-3 mb-3">
