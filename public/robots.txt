@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acolemanhvac.com/sitemap.xml
