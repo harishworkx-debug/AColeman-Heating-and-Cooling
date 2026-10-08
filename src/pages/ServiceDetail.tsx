@@ -17,7 +17,7 @@ import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CTASection from '@/components/CTASection';
 import CallCTA from '@/components/CallCTA';
-import { SERVICES, BUSINESS } from '@/data/business';
+import { SERVICES, BUSINESS, LOCATIONS } from '@/data/business';
 
 const iconMap: Record<string, typeof Flame> = {
   Flame,
@@ -311,9 +311,32 @@ export default function ServiceDetail({ resolvedSlug }: { resolvedSlug?: string 
         </section>
       )}
 
+      {/* Internal Links: Local Service Areas */}
+      <section className="section-pad bg-navy-50 border-t border-gray-100">
+        <div className="container-xl">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl font-display font-bold text-navy-900 mb-6 text-center">
+              Find {service.name} Near You
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              {LOCATIONS.filter(loc => loc.services.includes(service.slug)).map(location => (
+                <Link
+                  key={location.slug}
+                  to={`/${service.slug}-${location.slug}`}
+                  className="text-sm font-medium text-coolblue-700 hover:text-navy-900 transition-colors p-3 bg-white border border-gray-100 hover:border-coolblue-200 shadow-sm rounded-lg text-center"
+                >
+                  {service.name} {location.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CTASection
         title={`Need ${service.name} in Waukegan?`}
         subtitle={`Call AColeman Heating and Cooling at ${BUSINESS.phone}. We diagnose the problem and provide the appropriate ${service.name.toLowerCase()} service.`}
+
       />
     </>
   );

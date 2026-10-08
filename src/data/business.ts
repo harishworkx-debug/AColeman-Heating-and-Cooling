@@ -6,8 +6,10 @@ export const BUSINESS = {
   state: 'IL',
   zip: '60085',
   country: 'United States',
-  phone: '224-659-6849',
-  phoneLink: 'tel:2246596849',
+  phone: '(224) 524-0749',
+  phoneLink: 'tel:+12245240749',
+  email: 'info@acolemanhvac.com',
+  hours: 'Monday - Friday: 8:00 AM - 5:00 PM (24/7 Emergency Service)',
   website: 'https://acolemanhvac.com/',
   mapsLink: 'https://maps.app.goo.gl/8DXZ7qq5QuxvqXbSA',
   mapsEmbed:
@@ -79,7 +81,7 @@ export const SERVICES: ServiceItem[] = [
     cta: 'Explore Heating Repair',
     titleTag: 'Heating Repair Waukegan IL | AColeman Heating and Cooling',
     metaDescription:
-      'Heating repair in Waukegan, IL. AColeman Heating and Cooling diagnoses and repairs furnaces and heating systems that are not producing heat or are running poorly. Call 224-659-6849.',
+      'Heating repair in Waukegan, IL. AColeman Heating and Cooling diagnoses and repairs furnaces and heating systems that are not producing heat or are running poorly. Call (224) 524-0749.',
     h1: 'Heating Repair in Waukegan, IL',
     intro:
       'When your heating system stops working during a cold Illinois winter, you need a reliable HVAC contractor who can diagnose the problem and get your heat back on. AColeman Heating and Cooling provides heating repair services for homes throughout Waukegan and the surrounding communities. Whether your furnace has stopped producing heat, is making unusual noises, or is short-cycling, we work through the problem methodically to identify the cause and perform the appropriate repair.',
@@ -119,7 +121,7 @@ export const SERVICES: ServiceItem[] = [
       {
         title: 'Contact',
         description:
-          'Call 224-659-6849 and describe the heating problem you are experiencing. We will ask questions to understand the symptoms and schedule a service visit.',
+          'Call (224) 524-0749 and describe the heating problem you are experiencing. We will ask questions to understand the symptoms and schedule a service visit.',
       },
       {
         title: 'Diagnose',
@@ -160,7 +162,7 @@ export const SERVICES: ServiceItem[] = [
     cta: 'Explore Furnace Repair',
     titleTag: 'Furnace Repair Waukegan IL | AColeman Heating and Cooling',
     metaDescription:
-      'Furnace repair in Waukegan, IL. AColeman Heating and Cooling fixes furnaces that will not start, are short cycling, making noise, or not producing heat. Call 224-659-6849.',
+      'Furnace repair in Waukegan, IL. AColeman Heating and Cooling fixes furnaces that will not start, are short cycling, making noise, or not producing heat. Call (224) 524-0749.',
     h1: 'Furnace Repair in Waukegan, IL',
     intro:
       'A malfunctioning furnace during an Illinois winter is more than an inconvenience — it can affect the safety and comfort of your entire household. AColeman Heating and Cooling provides furnace repair services that focus on identifying the specific component or condition causing the problem. From ignition failures to blower motor issues, we work through each furnace system systematically to restore proper operation.',
@@ -241,7 +243,7 @@ export const SERVICES: ServiceItem[] = [
     cta: 'Explore Heating Installation',
     titleTag: 'Heating Installation Waukegan IL | AColeman Heating and Cooling',
     metaDescription:
-      'Heating installation in Waukegan, IL. AColeman Heating and Cooling installs and replaces heating systems with attention to proper sizing, setup, and startup. Call 224-659-6849.',
+      'Heating installation in Waukegan, IL. AColeman Heating and Cooling installs and replaces heating systems with attention to proper sizing, setup, and startup. Call (224) 524-0749.',
     h1: 'Heating Installation in Waukegan, IL',
     intro:
       'A properly installed heating system is the foundation of reliable winter comfort. AColeman Heating and Cooling provides heating installation services for new construction, system replacements, and upgrades throughout Waukegan. We focus on correct system sizing, proper connections, and thorough startup testing so your new heating system operates the way it should from day one.',
@@ -322,7 +324,7 @@ export const SERVICES: ServiceItem[] = [
     cta: 'Explore AC Repair',
     titleTag: 'Air Conditioning Repair Waukegan IL | AColeman Heating and Cooling',
     metaDescription:
-      'AC repair in Waukegan, IL. AColeman Heating and Cooling fixes air conditioners blowing warm air, short cycling, making noise, or not starting. Call 224-659-6849.',
+      'AC repair in Waukegan, IL. AColeman Heating and Cooling fixes air conditioners blowing warm air, short cycling, making noise, or not starting. Call (224) 524-0749.',
     h1: 'Air Conditioning Repair in Waukegan, IL',
     intro:
       'A broken air conditioner during an Illinois summer makes your home uncomfortable quickly. AColeman Heating and Cooling provides air conditioning repair services that focus on identifying the specific problem affecting your cooling system. Whether your AC is blowing warm air, short cycling, or not starting at all, we work through the system to find and fix the issue.',
@@ -362,7 +364,7 @@ export const SERVICES: ServiceItem[] = [
       {
         title: 'Contact',
         description:
-          'Call 224-659-6849 and describe the AC problem. We will schedule a service visit to diagnose the issue.',
+          'Call (224) 524-0749 and describe the AC problem. We will schedule a service visit to diagnose the issue.',
       },
       {
         title: 'Diagnose',
@@ -403,7 +405,7 @@ export const SERVICES: ServiceItem[] = [
     cta: 'Explore AC Installation',
     titleTag: 'AC Installation Waukegan IL | AColeman Heating and Cooling',
     metaDescription:
-      'AC installation in Waukegan, IL. AColeman Heating and Cooling installs and replaces air conditioning systems with attention to proper sizing and setup. Call 224-659-6849.',
+      'AC installation in Waukegan, IL. AColeman Heating and Cooling installs and replaces air conditioning systems with attention to proper sizing and setup. Call (224) 524-0749.',
     h1: 'AC Installation in Waukegan, IL',
     intro:
       'A correctly installed air conditioning system is essential for reliable summer comfort in Waukegan. AColeman Heating and Cooling provides AC installation services for new homes, system replacements, and upgrades. We focus on proper sizing, correct refrigerant charge, and thorough startup testing so your new cooling system performs the way it should.',
@@ -484,7 +486,7 @@ export const SERVICES: ServiceItem[] = [
     cta: 'View HVAC Maintenance',
     titleTag: 'HVAC Maintenance Waukegan IL | AColeman Heating and Cooling',
     metaDescription:
-      'HVAC maintenance in Waukegan, IL. AColeman Heating and Cooling provides preventive maintenance for heating and cooling systems to improve efficiency and reliability. Call 224-659-6849.',
+      'HVAC maintenance in Waukegan, IL. AColeman Heating and Cooling provides preventive maintenance for heating and cooling systems to improve efficiency and reliability. Call (224) 524-0749.',
     h1: 'HVAC Maintenance in Waukegan, IL',
     intro:
       'Regular HVAC maintenance helps your heating and cooling systems operate efficiently and reliably throughout the year. AColeman Heating and Cooling provides preventive maintenance services that include inspecting, cleaning, and testing system components. By addressing minor issues before they become major problems, maintenance can help extend the life of your equipment and reduce the likelihood of unexpected breakdowns.',
@@ -565,7 +567,7 @@ export const SERVICES: ServiceItem[] = [
     cta: 'Explore HVAC Diagnostics',
     titleTag: 'HVAC Diagnostics Waukegan IL | AColeman Heating and Cooling',
     metaDescription:
-      'HVAC diagnostics in Waukegan, IL. AColeman Heating and Cooling identifies the root cause of heating and cooling system problems with thorough testing. Call 224-659-6849.',
+      'HVAC diagnostics in Waukegan, IL. AColeman Heating and Cooling identifies the root cause of heating and cooling system problems with thorough testing. Call (224) 524-0749.',
     h1: 'HVAC Diagnostics in Waukegan, IL',
     intro:
       'When something is wrong with your heating or cooling system but the cause is not obvious, professional diagnostics are essential. AColeman Heating and Cooling provides thorough HVAC diagnostics that test system components, evaluate performance, and identify the root cause of the problem. We explain what we find in clear terms so you understand what is happening and what service is needed.',
@@ -646,7 +648,7 @@ export const SERVICES: ServiceItem[] = [
     cta: 'Explore Thermostat Services',
     titleTag: 'Thermostat Services Waukegan IL | AColeman Heating and Cooling',
     metaDescription:
-      'Thermostat services in Waukegan, IL. AColeman Heating and Cooling repairs, replaces, and installs thermostats for accurate temperature control and HVAC communication. Call 224-659-6849.',
+      'Thermostat services in Waukegan, IL. AColeman Heating and Cooling repairs, replaces, and installs thermostats for accurate temperature control and HVAC communication. Call (224) 524-0749.',
     h1: 'Thermostat Services in Waukegan, IL',
     intro:
       'Your thermostat is the control center for your heating and cooling system. If it is not communicating correctly with your HVAC equipment, your system may not heat or cool properly, may short cycle, or may not respond at all. AColeman Heating and Cooling provides thermostat repair, replacement, and installation services to ensure accurate temperature control and reliable system operation.',
@@ -727,7 +729,7 @@ export const SERVICES: ServiceItem[] = [
     cta: 'Explore HVAC Replacement',
     titleTag: 'HVAC System Replacement Waukegan IL | AColeman Heating and Cooling',
     metaDescription:
-      'HVAC system replacement in Waukegan, IL. AColeman Heating and Cooling removes old HVAC equipment and installs new, properly sized systems. Call 224-659-6849.',
+      'HVAC system replacement in Waukegan, IL. AColeman Heating and Cooling removes old HVAC equipment and installs new, properly sized systems. Call (224) 524-0749.',
     h1: 'HVAC System Replacement in Waukegan, IL',
     intro:
       'When your heating and cooling system has reached the end of its useful life, a full HVAC system replacement may be the most practical option. AColeman Heating and Cooling provides complete system replacement services, from removing old equipment to installing new, properly sized systems. We focus on correct sizing, proper installation, and thorough testing so your new system provides reliable comfort for years to come.',
@@ -808,7 +810,7 @@ export const SERVICES: ServiceItem[] = [
     cta: 'Explore Duct Cleaning',
     titleTag: 'Duct Cleaning Waukegan IL | AColeman Heating and Cooling',
     metaDescription:
-      'Duct cleaning in Waukegan, IL. AColeman Heating and Cleaning cleans HVAC ductwork to improve airflow and indoor air quality. Call 224-659-6849.',
+      'Duct cleaning in Waukegan, IL. AColeman Heating and Cleaning cleans HVAC ductwork to improve airflow and indoor air quality. Call (224) 524-0749.',
     h1: 'Duct Cleaning in Waukegan, IL',
     intro:
       'Over time, dust, pollen, pet dander, and other contaminants accumulate inside your HVAC ductwork. AColeman Heating and Cooling provides professional duct cleaning services that remove buildup from your duct system, helping your heating and cooling system operate more efficiently and improving the air quality in your home. Whether you have noticed reduced airflow, visible dust around your vents, or simply want a cleaner system, our duct cleaning service addresses the problem thoroughly.',
@@ -963,7 +965,7 @@ export const LOCATIONS: LocationItem[] = [
     services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
   },
   {
-    slug: 'zionsville-il',
+    slug: 'zion-il',
     name: 'Zion',
     state: 'IL',
     description:
@@ -994,6 +996,30 @@ export const LOCATIONS: LocationItem[] = [
       'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Highland Park, Illinois. We serve the Highland Park community with professional HVAC repair, installation, and maintenance.',
     services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
   },
+  {
+    slug: 'gages-lake-il',
+    name: 'Gages Lake',
+    state: 'IL',
+    description:
+      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes in Gages Lake, Illinois. We serve the Gages Lake community with dependable HVAC repair and installation.',
+    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+  },
+  {
+    slug: 'lake-bluff-il',
+    name: 'Lake Bluff',
+    state: 'IL',
+    description:
+      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Lake Bluff, Illinois. We are nearby and ready to respond to your heating and cooling needs.',
+    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+  },
+  {
+    slug: 'grandwood-park-il',
+    name: 'Grandwood Park',
+    state: 'IL',
+    description:
+      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Grandwood Park, Illinois. Our technicians are familiar with the area and respond promptly to HVAC service calls.',
+    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+  }
 ];
 
 export type FAQItem = {
@@ -1076,7 +1102,7 @@ export const FAQS: FAQItem[] = [
   {
     category: 'Scheduling',
     q: 'How do I schedule service with AColeman Heating and Cooling?',
-    a: 'Call us at 224-659-6849 to schedule a service visit. We will ask about the problem you are experiencing and arrange a time that works for you. You can also use the contact form on our website to send us a message.',
+    a: 'Call us at (224) 524-0749 to schedule a service visit. We will ask about the problem you are experiencing and arrange a time that works for you. You can also use the contact form on our website to send us a message.',
   },
   {
     category: 'Scheduling',

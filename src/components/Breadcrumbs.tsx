@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export type Crumb = {
   label: string;
@@ -7,22 +8,40 @@ export type Crumb = {
 };
 
 export default function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((crumb, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: crumb.label,
+      item: crumb.path ? `https://acolemanhvac.com${crumb.path}` : undefined,
+    })),
+  };
+
   return (
-    <nav aria-label="Breadcrumb" className="text-sm">
-      <ol className="flex items-center flex-wrap gap-1.5 text-navy-400">
-        {crumbs.map((crumb, i) => (
-          <li key={i} className="flex items-center gap-1.5">
-            {crumb.path ? (
-              <Link to={crumb.path} className="hover:text-coolblue-700 transition-colors">
-                {crumb.label}
-              </Link>
-            ) : (
-              <span className="text-navy-700 font-medium">{crumb.label}</span>
-            )}
-            {i < crumbs.length - 1 && <ChevronRight className="w-3.5 h-3.5 text-navy-300" />}
-          </li>
-        ))}
-      </ol>
-    </nav>
+    <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      </Helmet>
+      <nav aria-label="Breadcrumb" className="text-sm">
+        <ol className="flex items-center flex-wrap gap-1.5 text-navy-400">
+          {crumbs.map((crumb, i) => (
+            <li key={i} className="flex items-center gap-1.5">
+              {crumb.path ? (
+                <Link to={crumb.path} className="hover:text-coolblue-700 transition-colors">
+                  {crumb.label}
+                </Link>
+              ) : (
+                <span className="text-navy-700 font-medium">{crumb.label}</span>
+              )}
+              {i < crumbs.length - 1 && <ChevronRight className="w-3.5 h-3.5 text-navy-300" />}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </>
   );
 }

@@ -34,7 +34,7 @@ export default function Services() {
     <>
       <SEO
         title="HVAC Services in Waukegan IL | AColeman Heating and Cooling"
-        description="Professional HVAC services in Waukegan, IL — heating repair, furnace repair, AC repair, AC installation, HVAC maintenance, diagnostics, thermostat services, and system replacement. Call 224-659-6849."
+        description="Professional HVAC services in Waukegan, IL — heating repair, furnace repair, AC repair, AC installation, HVAC maintenance, diagnostics, thermostat services, and system replacement. Call (224) 524-0749."
         canonicalPath="/services"
         structuredData={{
           '@type': 'Service',

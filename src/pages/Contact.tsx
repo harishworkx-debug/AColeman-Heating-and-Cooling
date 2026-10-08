@@ -124,17 +124,53 @@ export default function Contact() {
                     </p>
                   </div>
                 </a>
-                <div className="flex items-start gap-4">
+
+                <a href={`mailto:${BUSINESS.email}`} className="flex items-start gap-4 group">
                   <div className="w-11 h-11 rounded-xl bg-coolblue-100 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 text-coolblue-600" />
+                    <Mail className="w-5 h-5 text-coolblue-600" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-navy-900 text-sm mb-0.5">Email</p>
+                    <p className="text-navy-600 group-hover:text-coolblue-700 transition-colors">
+                      {BUSINESS.email}
+                    </p>
+                  </div>
+                </a>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-xl bg-navy-100 flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5 text-navy-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-navy-900 text-sm mb-0.5">Address</p>
                     <p className="text-navy-600 text-sm leading-relaxed">
                       {BUSINESS.name}<br />
                       {BUSINESS.address}<br />
-                      {BUSINESS.city}, {BUSINESS.state} {BUSINESS.zip}<br />
-                      {BUSINESS.country}
+                      {BUSINESS.city}, {BUSINESS.state} {BUSINESS.zip}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-xl bg-warmorange-50 flex items-center justify-center shrink-0">
+                    <Clock className="w-5 h-5 text-warmorange-500" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-navy-900 text-sm mb-0.5">Hours</p>
+                    <p className="text-navy-600 text-sm leading-relaxed">
+                      {BUSINESS.hours}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-xl bg-coolblue-50 flex items-center justify-center shrink-0">
+                    <Navigation className="w-5 h-5 text-coolblue-500" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-navy-900 text-sm mb-0.5">Service Area</p>
+                    <p className="text-navy-600 text-sm leading-relaxed">
+                      Proudly serving Waukegan, Gurnee, North Chicago, Beach Park, Zion, and surrounding Lake County communities.
                     </p>
                   </div>
                 </div>

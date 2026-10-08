@@ -11,7 +11,7 @@ export default function ServiceAreas() {
     <>
       <SEO
         title="HVAC Service Areas | AColeman Heating and Cooling"
-        description="AColeman Heating and Cooling provides HVAC services in Waukegan, IL and surrounding communities. Heating repair, AC repair, installation, and maintenance. Call 224-659-6849."
+        description="AColeman Heating and Cooling provides HVAC services in Waukegan, IL and surrounding communities. Heating repair, AC repair, installation, and maintenance. Call (224) 524-0749."
         canonicalPath="/service-areas"
         structuredData={{
           '@type': 'Service',

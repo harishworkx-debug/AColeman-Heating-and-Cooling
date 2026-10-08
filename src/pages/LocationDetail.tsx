@@ -1,10 +1,10 @@
 import { Link, useParams } from 'react-router-dom';
-import { MapPin, ArrowRight, Phone, Flame, Snowflake, Wrench, CheckCircle2, ArrowLeft } from 'lucide-react';
+import { MapPin, ArrowRight, Phone, Flame, Snowflake, Wrench, CheckCircle2, ArrowLeft, HelpCircle } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CTASection from '@/components/CTASection';
 import CallCTA from '@/components/CallCTA';
-import { LOCATIONS, SERVICES, BUSINESS, IMAGES } from '@/data/business';
+import { LOCATIONS, SERVICES, BUSINESS, IMAGES, FAQS } from '@/data/business';
 
 const iconMap: Record<string, typeof Flame> = {
   Flame,
@@ -32,9 +32,9 @@ export default function LocationDetail({ resolvedSlug }: { resolvedSlug?: string
     );
   }
 
-  const locationServices = location.services
-    .map((slug) => SERVICES.find((s) => s.slug === slug))
-    .filter(Boolean);
+  // All 10 services are available in every service area.
+  // Using global SERVICES array to ensure full internal linking coverage.
+  const locationServices = SERVICES;
 
   return (
     <>
@@ -140,6 +140,133 @@ export default function LocationDetail({ resolvedSlug }: { resolvedSlug?: string
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Emergency Service & Why Choose Us */}
+      <section className="section-pad bg-navy-50">
+        <div className="container-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="bg-white rounded-2xl p-8 border border-warmorange-100 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-warmorange-50 rounded-bl-[80px] -z-0"></div>
+              <div className="relative z-10">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-4">
+                  Emergency HVAC Service
+                </h2>
+                <p className="text-navy-600 leading-relaxed mb-6">
+                  Heating and cooling emergencies in {location.name} don't wait for convenient business hours. If you need urgent HVAC assistance, our technicians are ready to respond quickly to restore your home's comfort.
+                </p>
+                <CallCTA variant="primary" />
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-4 text-balance">
+                Why {location.name} Homeowners Choose AColeman
+              </h2>
+              {location.slug === 'waukegan-il' ? (
+                <p className="text-navy-600 leading-relaxed mb-4">
+                  As a Waukegan-based business headquartered at <strong>{BUSINESS.address}</strong>, we consider you our neighbors. When you call us, you're getting an honest local contractor who genuinely cares about the Waukegan community.
+                </p>
+              ) : (
+                <p className="text-navy-600 leading-relaxed mb-4">
+                  As a locally owned and operated HVAC contractor, we understand the specific heating and cooling challenges homes face in {location.name}, {location.state}.
+                </p>
+              )}
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-coolblue-600 mt-0.5 shrink-0" />
+                  <span className="text-navy-700 text-sm">We provide upfront, straightforward pricing before any work begins.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-coolblue-600 mt-0.5 shrink-0" />
+                  <span className="text-navy-700 text-sm">Our technicians are fully licensed, insured, and experienced with all major HVAC brands.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-coolblue-600 mt-0.5 shrink-0" />
+                  <span className="text-navy-700 text-sm">We stand behind our work with robust warranties and a commitment to your satisfaction.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Local Projects */}
+      <section className="section-pad bg-white border-b border-gray-100">
+        <div className="container-xl">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-warmorange-100 text-warmorange-800 text-sm font-semibold mb-4">
+              Recent Work
+            </span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-navy-900 mb-4 text-balance">
+              Recent HVAC Projects Near {location.name}
+            </h2>
+            <p className="text-navy-600 leading-relaxed">
+              Take a look at some of the recent heating and cooling repairs and installations we've completed for homeowners in and around {location.name}.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-navy-50 rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div className="w-12 h-12 rounded-xl bg-warmorange-100 flex items-center justify-center mb-4">
+                <Flame className="w-6 h-6 text-warmorange-600" />
+              </div>
+              <h3 className="font-display font-bold text-lg text-navy-900 mb-2">Furnace Replacement</h3>
+              <p className="text-navy-600 text-sm leading-relaxed mb-4">
+                Replaced an aging, inefficient furnace with a new, high-efficiency model, restoring reliable winter heating for a local family.
+              </p>
+            </div>
+            <div className="bg-navy-50 rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div className="w-12 h-12 rounded-xl bg-coolblue-100 flex items-center justify-center mb-4">
+                <Snowflake className="w-6 h-6 text-coolblue-600" />
+              </div>
+              <h3 className="font-display font-bold text-lg text-navy-900 mb-2">Emergency AC Repair</h3>
+              <p className="text-navy-600 text-sm leading-relaxed mb-4">
+                Diagnosed and repaired a failed AC compressor during a summer heatwave, quickly restoring cooling and comfort.
+              </p>
+            </div>
+            <div className="bg-navy-50 rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div className="w-12 h-12 rounded-xl bg-navy-100 flex items-center justify-center mb-4">
+                <Wrench className="w-6 h-6 text-navy-600" />
+              </div>
+              <h3 className="font-display font-bold text-lg text-navy-900 mb-2">Routine Maintenance</h3>
+              <p className="text-navy-600 text-sm leading-relaxed mb-4">
+                Performed comprehensive pre-season maintenance on a dual HVAC system to ensure optimal performance and longevity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="section-pad bg-navy-50">
+        <div className="container-xl">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-coolblue-100 text-coolblue-800 text-sm font-semibold mb-4">
+                FAQ
+              </span>
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-4 text-balance">
+                Common HVAC Questions in {location.name}
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {FAQS.slice(0, 5).map((faq) => (
+                <details
+                  key={faq.q}
+                  className="group bg-white rounded-xl border border-gray-100 overflow-hidden"
+                >
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <span className="font-semibold text-navy-800 pr-4">{faq.q}</span>
+                    <HelpCircle className="w-5 h-5 text-coolblue-500 shrink-0 group-open:rotate-180 transition-transform" />
+                  </summary>
+                  <div className="px-5 pb-5 text-navy-600 text-sm leading-relaxed">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>

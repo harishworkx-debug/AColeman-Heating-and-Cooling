@@ -150,10 +150,10 @@ export default function LocationServiceDetail({
         <div className="container-xl">
           <div className="max-w-4xl">
             <span className="inline-block px-4 py-1.5 rounded-full bg-navy-100 text-navy-700 text-sm font-semibold mb-4">
-              Common Problems in {location.name}
+              Local Service
             </span>
             <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-6">
-              {service.name} Issues We Help With in {location.name}
+              {service.name} Problems We Repair in {location.name}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {service.problems.map((problem) => (
@@ -178,7 +178,7 @@ export default function LocationServiceDetail({
               Signs & Symptoms
             </span>
             <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-6">
-              Recognizing {service.name} Problems in {location.name}
+              Common {service.category} Issues in Local Homes
             </h2>
             <div className="space-y-4">
               {service.symptoms.map((symptom) => (
@@ -208,7 +208,7 @@ export default function LocationServiceDetail({
               Our Process
             </span>
             <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-4 text-balance">
-              How {service.name} Works in {location.name}
+              Our {service.name} Process
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -229,8 +229,98 @@ export default function LocationServiceDetail({
         </div>
       </section>
 
-      {/* FAQs */}
+      {/* Emergency Service & Why Choose Us */}
       <section className="section-pad bg-navy-50">
+        <div className="container-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="bg-white rounded-2xl p-8 border border-warmorange-100 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-warmorange-50 rounded-bl-[80px] -z-0"></div>
+              <div className="relative z-10">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-4">
+                  Emergency {service.name}
+                </h2>
+                <p className="text-navy-600 leading-relaxed mb-6">
+                  HVAC emergencies in {location.name} don't wait for convenient business hours. If you need urgent {service.name.toLowerCase()} assistance, we are ready to respond quickly and restore your home's comfort.
+                </p>
+                <CallCTA variant="primary" />
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-4 text-balance">
+                Why {location.name} Homeowners Choose AColeman
+              </h2>
+              {location.slug === 'waukegan-il' ? (
+                <p className="text-navy-600 leading-relaxed mb-4">
+                  As Waukegan locals headquartered at <strong>{BUSINESS.address}, {BUSINESS.city}, {BUSINESS.state}</strong>, we are deeply committed to our community. When you need {service.name.toLowerCase()} in Waukegan, you're getting a neighbor who cares about the quality of the work and the comfort of your home.
+                </p>
+              ) : (
+                <p className="text-navy-600 leading-relaxed mb-4">
+                  As a local HVAC contractor, we understand the specific heating and cooling needs of homes in {location.name}, {location.state}.
+                </p>
+              )}
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-coolblue-600 mt-0.5 shrink-0" />
+                  <span className="text-navy-700 text-sm">We provide honest, straightforward pricing before we start any {service.name.toLowerCase()}.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-coolblue-600 mt-0.5 shrink-0" />
+                  <span className="text-navy-700 text-sm">Our technicians are fully licensed, insured, and experienced in servicing all major brands.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-coolblue-600 mt-0.5 shrink-0" />
+                  <span className="text-navy-700 text-sm">We focus on long-term solutions, not just quick fixes.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Conditional Waukegan Headquarters Spotlight */}
+      {location.slug === 'waukegan-il' && (
+        <section className="section-pad bg-white border-b border-gray-100">
+          <div className="container-xl">
+            <div className="bg-navy-900 rounded-2xl p-8 md:p-12 text-center text-white relative overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+              <div className="relative z-10 max-w-3xl mx-auto">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
+                  <MapPin className="w-4 h-4 text-warmorange-400" />
+                  <span className="text-sm font-semibold">Headquartered in Waukegan</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                  Top-Rated {service.name} in Waukegan
+                </h2>
+                <p className="text-navy-200 text-lg leading-relaxed mb-8">
+                  You can find us at <strong>{BUSINESS.address}</strong>. Because we're based right here in Waukegan, our response times for {service.name.toLowerCase()} are incredibly fast. We've helped hundreds of local families restore their home comfort.
+                </p>
+                <a href={BUSINESS.phoneLink} className="inline-flex items-center gap-2 bg-warmorange-500 text-white font-semibold px-8 py-4 rounded-xl hover:bg-warmorange-600 transition-all duration-300 shadow-lg shadow-warmorange-500/25">
+                  <Phone className="w-5 h-5" />
+                  Call Waukegan Office: {BUSINESS.phone}
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Repair vs Replacement */}
+      <section className="section-pad bg-white">
+        <div className="container-xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-4">
+              {service.name} vs Replacement
+            </h2>
+            <p className="text-navy-600 leading-relaxed">
+              When dealing with {service.name.toLowerCase()} issues, {location.name} homeowners often wonder if it's better to repair or replace their system. We evaluate the age of your equipment, the cost of the repair, and the overall efficiency to help you make an informed decision that makes financial sense.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="section-pad bg-navy-50 border-t border-gray-100">
         <div className="container-xl">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
@@ -238,7 +328,7 @@ export default function LocationServiceDetail({
                 FAQ
               </span>
               <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-4 text-balance">
-                {service.name} FAQs in {location.name}
+                Frequently Asked Questions
               </h2>
             </div>
             <div className="space-y-4">
@@ -255,6 +345,28 @@ export default function LocationServiceDetail({
                     {faq.a}
                   </div>
                 </details>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Links: Other Services in City */}
+      <section className="section-pad bg-white">
+        <div className="container-xl">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-display font-bold text-navy-900 mb-6 text-center">
+              Other HVAC Services in {location.name}
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {SERVICES.filter(s => s.slug !== service.slug).map(s => (
+                <Link
+                  key={s.slug}
+                  to={`/${s.slug}-${location.slug}`}
+                  className="text-sm font-medium text-coolblue-700 hover:text-navy-900 transition-colors p-3 bg-navy-50 rounded-lg text-center"
+                >
+                  {s.name} {location.name}
+                </Link>
               ))}
             </div>
           </div>

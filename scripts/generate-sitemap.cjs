@@ -46,8 +46,6 @@ for (const url of urls) {
     xml += `
   <url>
     <loc>${DOMAIN}${url}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>${url === '/' ? '1.0' : '0.8'}</priority>
   </url>`;
 }
 xml += '\n</urlset>';

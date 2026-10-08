@@ -10,6 +10,9 @@ import {
   Phone,
   ArrowRight,
   CheckCircle2,
+  AlertCircle,
+  Award,
+  Users
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -74,34 +77,46 @@ export default function About() {
         </div>
       </section>
 
-      {/* Main content */}
+      {/* Who We Are & Meet the Owner */}
       <section className="section-pad bg-white">
         <div className="container-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>
               <span className="inline-block px-4 py-1.5 rounded-full bg-coolblue-100 text-coolblue-800 text-sm font-semibold mb-4">
                 Who We Are
               </span>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-navy-900 mb-6 text-balance">
-                A Local Waukegan HVAC Contractor
+                Your Trusted Waukegan HVAC Contractor
               </h2>
+              <div className="space-y-4 text-navy-600 leading-relaxed mb-10">
+                <p>
+                  AColeman Heating and Cooling is located at {BUSINESS.address} in {BUSINESS.city}, {BUSINESS.state}. As a local, fully licensed, and insured heating contractor, we provide professional heating, cooling, and HVAC services to homes and businesses across Waukegan and the surrounding communities.
+                </p>
+                <p>
+                  We service all major brands of HVAC equipment and bring years of hands-on experience to every job. Our goal is to ensure your home remains comfortable and safe, whether it's the peak of summer or the dead of winter.
+                </p>
+              </div>
+
+              <span className="inline-block px-4 py-1.5 rounded-full bg-warmorange-100 text-warmorange-800 text-sm font-semibold mb-4">
+                Meet the Owner
+              </span>
+              <h3 className="text-2xl font-display font-bold text-navy-900 mb-4">
+                Led by Jamie, Owner & Lead Technician
+              </h3>
               <div className="space-y-4 text-navy-600 leading-relaxed">
                 <p>
-                  AColeman Heating and Cooling is located at {BUSINESS.address} in {BUSINESS.city}, {BUSINESS.state}. As a local heating contractor, we provide heating, cooling, and HVAC services to homes and businesses in Waukegan and the surrounding communities.
+                  AColeman Heating and Cooling is proudly led by Jamie, a highly experienced and bilingual HVAC professional. Jamie is known throughout Waukegan for his unmatched professionalism, quality of work, and commitment to doing things right the first time.
                 </p>
                 <p>
-                  We focus on heating and cooling repair, installation, maintenance, and troubleshooting. Whether your furnace has stopped working during a cold Illinois winter or your air conditioner is not cooling on a hot summer day, we work through the problem methodically to identify the cause and provide the appropriate service.
-                </p>
-                <p>
-                  Our approach is straightforward: clear communication, thorough diagnostics, and attention to detail on every job. We explain what we find and what service is needed so you can make informed decisions about your heating and cooling system.
+                  We believe in honest work. When you call AColeman, you are getting a dedicated team that cares about the Waukegan community and stands behind every repair, installation, and maintenance check with solid warranties and guaranteed satisfaction.
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 lg:sticky lg:top-8">
               <div className="rounded-2xl overflow-hidden shadow-xl h-64">
                 <img
                   src={IMAGES.techRepair}
-                  alt="HVAC technician repairing an air conditioning unit"
+                  alt="Jamie, Owner of AColeman Heating and Cooling, repairing an AC unit"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -109,7 +124,7 @@ export default function About() {
               <div className="rounded-2xl overflow-hidden shadow-xl h-64 mt-8">
                 <img
                   src={IMAGES.thermostatHand}
-                  alt="Hand adjusting a modern smart thermostat on a wall"
+                  alt="Professional thermostat installation and testing"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -117,7 +132,7 @@ export default function About() {
               <div className="rounded-2xl overflow-hidden shadow-xl h-64 -mt-4">
                 <img
                   src={IMAGES.livingRoom}
-                  alt="Comfortable modern living room interior"
+                  alt="Comfortable Waukegan home after HVAC service"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -125,11 +140,35 @@ export default function About() {
               <div className="rounded-2xl overflow-hidden shadow-xl h-64 mt-4">
                 <img
                   src={IMAGES.ductwork}
-                  alt="HVAC ductwork and ventilation system"
+                  alt="Clean and efficient HVAC ductwork"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Badges */}
+      <section className="py-10 bg-navy-900 text-white border-y border-navy-800">
+        <div className="container-xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="flex flex-col items-center gap-3">
+              <ShieldCheck className="w-8 h-8 text-warmorange-400" />
+              <span className="font-semibold text-sm md:text-base">Licensed & Insured</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <Award className="w-8 h-8 text-warmorange-400" />
+              <span className="font-semibold text-sm md:text-base">All Brands Serviced</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <Wrench className="w-8 h-8 text-warmorange-400" />
+              <span className="font-semibold text-sm md:text-base">Expert Workmanship</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <Users className="w-8 h-8 text-warmorange-400" />
+              <span className="font-semibold text-sm md:text-base">Bilingual Service (English/Spanish)</span>
             </div>
           </div>
         </div>
@@ -195,11 +234,14 @@ export default function About() {
         <div className="container-xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="inline-block px-4 py-1.5 rounded-full bg-navy-100 text-navy-700 text-sm font-semibold mb-4">
-              How We Work
+              Our Approach to HVAC Repair
             </span>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-navy-900 mb-4 text-balance">
-              Our Approach to HVAC Service
+              Why Waukegan Homeowners Choose Us
             </h2>
+            <p className="text-navy-600 leading-relaxed">
+              When your heating or cooling fails, you need a contractor who works with urgency, honesty, and precision. Here is how we approach every service call.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value) => (
@@ -219,7 +261,60 @@ export default function About() {
         </div>
       </section>
 
+      {/* Emergency & Service Area */}
+      <section className="section-pad bg-navy-50">
+        <div className="container-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Emergency Service */}
+            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-warmorange-100 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-warmorange-50 rounded-bl-[100px] -z-0"></div>
+              <div className="relative z-10">
+                <div className="w-14 h-14 rounded-2xl bg-warmorange-100 flex items-center justify-center mb-6">
+                  <AlertCircle className="w-7 h-7 text-warmorange-600" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-navy-900 mb-4">
+                  Emergency HVAC Service
+                </h2>
+                <p className="text-navy-600 leading-relaxed mb-6">
+                  HVAC emergencies rarely happen during convenient hours. Whether it's a furnace failure on a freezing Waukegan night or an AC breakdown during a humid summer weekend, we offer emergency repair services to get your home back to a safe, comfortable temperature as quickly as possible.
+                </p>
+                <CallCTA variant="primary" />
+              </div>
+            </div>
+
+            {/* Service Area */}
+            <div>
+              <span className="inline-block px-4 py-1.5 rounded-full bg-coolblue-100 text-coolblue-800 text-sm font-semibold mb-4">
+                Local Coverage
+              </span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-navy-900 mb-6 text-balance">
+                Our Service Area
+              </h2>
+              <p className="text-navy-600 leading-relaxed mb-6">
+                Based in Waukegan, IL, AColeman Heating and Cooling is proud to serve Lake County and the surrounding areas. Because we are locally operated, we can respond to calls quickly and efficiently.
+              </p>
+              <ul className="grid grid-cols-2 gap-3 mb-8">
+                {['Waukegan, IL', 'Gurnee, IL', 'North Chicago, IL', 'Beach Park, IL', 'Zion, IL', 'Park City, IL'].map((city) => (
+                  <li key={city} className="flex items-center gap-2 text-navy-700">
+                    <MapPin className="w-4 h-4 text-warmorange-500 shrink-0" />
+                    <span className="font-medium">{city}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/service-areas"
+                className="inline-flex items-center gap-2 text-coolblue-700 font-semibold hover:gap-3 transition-all"
+              >
+                View Complete Service Area
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Location */}
+
       <section className="bg-navy-50 py-16">
         <div className="container-xl">
           <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-8">
