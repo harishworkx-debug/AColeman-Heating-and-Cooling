@@ -6,6 +6,7 @@ type SEOProps = {
   description: string;
   canonicalPath?: string;
   ogImage?: string;
+  noindex?: boolean;
   structuredData?: object;
 };
 
@@ -14,6 +15,7 @@ export default function SEO({
   description,
   canonicalPath = '/',
   ogImage,
+  noindex = false,
   structuredData,
 }: SEOProps) {
   const canonical = `https://acolemanhvac.com${canonicalPath}`;
@@ -27,6 +29,8 @@ export default function SEO({
     '@id': 'https://acolemanhvac.com',
     url: 'https://acolemanhvac.com',
     telephone: BUSINESS.phone,
+    priceRange: '$$',
+    hasMap: BUSINESS.mapsLink,
     address: {
       '@type': 'PostalAddress',
       streetAddress: BUSINESS.address,
@@ -40,21 +44,45 @@ export default function SEO({
       latitude: 42.336398971075035,
       longitude: -87.86604088827738,
     },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-      ],
-      opens: '08:00',
-      closes: '17:00',
-    },
+    areaServed: [
+      { '@type': 'City', name: 'Waukegan, IL' },
+      { '@type': 'City', name: 'Gurnee, IL' },
+      { '@type': 'City', name: 'North Chicago, IL' },
+      { '@type': 'City', name: 'Libertyville, IL' },
+      { '@type': 'City', name: 'Lake Forest, IL' },
+      { '@type': 'City', name: 'Zion, IL' },
+    ],
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+        ],
+        opens: '08:00',
+        closes: '17:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday',
+          'Sunday',
+        ],
+        description: '24/7 Emergency HVAC Service',
+        opens: '00:00',
+        closes: '23:59',
+      },
+    ],
     sameAs: [
       'https://maps.app.goo.gl/8DXZ7qq5QuxvqXbSA',
-      // The user should add their Facebook, Yelp, Birdeye, etc. URLs here to unify citations
     ],
   };
 
@@ -62,6 +90,7 @@ export default function SEO({
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
       <link rel="canonical" href={canonical} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

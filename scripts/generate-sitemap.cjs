@@ -19,7 +19,7 @@ if(locationsMatch) {
     for(const m of matches) lSlugs.push(m[1]);
 }
 
-const DOMAIN = 'https://www.acolemanhvac.com';
+const DOMAIN = 'https://acolemanhvac.com';
 
 const urls = [
     '/',

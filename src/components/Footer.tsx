@@ -11,12 +11,12 @@ import {
 import { BUSINESS, SERVICES, LOCATIONS } from '@/data/business';
 
 const footerServices = SERVICES.map((s) => ({
-  to: `/${s.slug}-waukegan-il`,
+  to: `/${s.slug}`,
   label: s.shortName,
 }));
 
 const footerAreas = LOCATIONS.map((l) => ({
-  to: `/air-conditioning-repair-${l.slug}`,
+  to: `/${l.slug}`,
   label: `${l.name}, ${l.state}`,
 }));
 

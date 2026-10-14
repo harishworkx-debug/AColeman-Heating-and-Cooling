@@ -319,7 +319,7 @@ export default function ServiceDetail({ resolvedSlug }: { resolvedSlug?: string 
               Find {service.name} Near You
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-              {LOCATIONS.filter(loc => loc.services.includes(service.slug)).map(location => (
+              {LOCATIONS.map(location => (
                 <Link
                   key={location.slug}
                   to={`/${service.slug}-${location.slug}`}

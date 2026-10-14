@@ -17,12 +17,12 @@ export default function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/service-areas" element={<ServiceAreas />} />
-        <Route path="/:slug" element={<DynamicRoute />} />
-        <Route path="/about" element={<About />} />
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/:slug" element={<DynamicRoute />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>

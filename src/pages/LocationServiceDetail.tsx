@@ -369,6 +369,21 @@ export default function LocationServiceDetail({
                 </Link>
               ))}
             </div>
+            <div className="flex flex-wrap items-center justify-center gap-6 mt-8 pt-6 border-t border-gray-100 text-sm">
+              <Link
+                to={`/${location.slug}`}
+                className="inline-flex items-center gap-1.5 text-navy-700 font-semibold hover:text-coolblue-700 transition-colors"
+              >
+                ← View all HVAC Services in {location.name}
+              </Link>
+              <span className="text-gray-300">|</span>
+              <Link
+                to={`/${service.slug}`}
+                className="inline-flex items-center gap-1.5 text-navy-700 font-semibold hover:text-coolblue-700 transition-colors"
+              >
+                View Main {service.name} Guide →
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -263,7 +263,7 @@ export default function Contact() {
                           value={form.phone}
                           onChange={(e) => handleChange('phone', e.target.value)}
                           className={`input-field pl-10 ${errors.phone ? 'border-red-300 ring-2 ring-red-200' : ''}`}
-                          placeholder="224-555-0000"
+                          placeholder="(224) 524-XXXX"
                           aria-invalid={!!errors.phone}
                         />
                       </div>

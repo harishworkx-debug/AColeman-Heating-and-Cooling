@@ -122,7 +122,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="AColeman Heating and Cooling | Waukegan HVAC Contractor"
+        title="AColeman Heating & Cooling | HVAC Services in Waukegan, IL"
         description="AColeman Heating and Cooling provides professional heating repair, AC repair, installation, and HVAC maintenance for homes and businesses in Waukegan, IL. Call (224) 524-0749."
         canonicalPath="/"
       />
@@ -283,7 +283,7 @@ export default function Home() {
                       {service.shortDescription}
                     </p>
                     <Link
-                      to={`/${service.slug}-waukegan-il`}
+                      to={`/${service.slug}`}
                       className="inline-flex items-center gap-1.5 text-coolblue-700 font-semibold text-sm hover:gap-2.5 transition-all"
                     >
                       {service.cta}

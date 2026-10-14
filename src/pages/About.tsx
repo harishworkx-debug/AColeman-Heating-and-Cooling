@@ -101,7 +101,7 @@ export default function About() {
                 Meet the Owner
               </span>
               <h3 className="text-2xl font-display font-bold text-navy-900 mb-4">
-                Led by Jamie, Owner & Lead Technician
+                Led by Jamie, Owner & Master HVAC Technician
               </h3>
               <div className="space-y-4 text-navy-600 leading-relaxed">
                 <p>
