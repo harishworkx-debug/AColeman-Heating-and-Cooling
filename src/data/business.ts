@@ -1090,7 +1090,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'As a Waukegan-based heating and cooling contractor headquartered at 2409 W Dugdale Rd, AColeman Heating and Cooling provides fast, reliable HVAC repair, furnace repair, AC repair, and heating installation for homes and businesses throughout Waukegan, IL. Our central facility ensures rapid emergency response and trustworthy neighborhood service.',
-    services: ['heating-repair', 'furnace-repair', 'air-conditioning-repair', 'ac-installation', 'hvac-maintenance'],
+    services: ['ac-repair', 'furnace-repair', 'heating-repair', 'ac-installation', 'hvac-maintenance'],
   },
   {
     slug: 'gurnee-il',
@@ -1098,7 +1098,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'Centrally dispatched from our nearby Waukegan facility, AColeman Heating and Cooling provides prompt HVAC repair, furnace repair, and air conditioning service throughout Gurnee, IL. Whether your home is near Gurnee Mills, along Grand Avenue, or in an established neighborhood, our mobile technicians deliver dependable heating and cooling care.',
-    services: ['hvac-repair', 'furnace-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+    services: ['ac-repair', 'hvac-repair', 'furnace-repair', 'hvac-maintenance'],
   },
   {
     slug: 'north-chicago-il',
@@ -1106,7 +1106,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'Located directly adjacent to North Chicago, AColeman Heating and Cooling dispatches quickly from our Waukegan headquarters to provide expert AC repair, furnace troubleshooting, and preventive HVAC maintenance for homes and facilities across North Chicago, IL.',
-    services: ['air-conditioning-repair', 'hvac-maintenance', 'furnace-repair', 'heating-repair'],
+    services: ['ac-repair', 'hvac-maintenance', 'furnace-repair', 'heating-repair'],
   },
   {
     slug: 'libertyville-il',
@@ -1114,7 +1114,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'AColeman Heating and Cooling serves Libertyville, IL with professional HVAC repair, AC installation, and heating diagnostics dispatched directly from our nearby Waukegan shop. We deliver transparent pricing, careful equipment sizing, and long-lasting climate comfort for Libertyville residences.',
-    services: ['hvac-repair', 'ac-installation', 'furnace-repair', 'hvac-system-replacement'],
+    services: ['ac-repair', 'hvac-repair', 'ac-installation', 'furnace-repair', 'hvac-system-replacement'],
   },
   {
     slug: 'lake-forest-il',
@@ -1122,7 +1122,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'Providing Lake Forest, IL homeowners with precision furnace repair, air conditioning service, and complete HVAC system replacement. Dispatched promptly from our Waukegan base, our licensed technicians provide careful diagnostics and high-efficiency system installations.',
-    services: ['furnace-repair', 'hvac-system-replacement', 'air-conditioning-repair', 'hvac-maintenance'],
+    services: ['ac-repair', 'furnace-repair', 'hvac-system-replacement', 'hvac-maintenance'],
   },
   {
     slug: 'zion-il',
@@ -1130,7 +1130,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'Serving our neighbors in Zion, IL, AColeman Heating and Cooling provides responsive HVAC repair, furnace diagnostics, and cooling maintenance. Dispatched directly from nearby Waukegan, we ensure your family stays comfortable through cold lakefront winters and humid summers.',
-    services: ['hvac-repair', 'furnace-repair', 'air-conditioning-repair', 'heating-installation'],
+    services: ['ac-repair', 'hvac-repair', 'furnace-repair', 'heating-installation'],
   },
   {
     slug: 'beach-park-il',
@@ -1138,7 +1138,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'Situated just north of our Waukegan headquarters, Beach Park residents receive prompt mobile dispatch for emergency furnace repair, seasonal AC tune-ups, and heating system replacements from our experienced team.',
-    services: ['furnace-repair', 'hvac-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+    services: ['ac-repair', 'furnace-repair', 'hvac-repair', 'hvac-maintenance'],
   },
   {
     slug: 'highland-park-il',
@@ -1146,7 +1146,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'AColeman Heating and Cooling provides homeowners and light commercial properties in Highland Park, IL with dependable AC repair, furnace servicing, and proactive HVAC maintenance dispatched conveniently from our central Lake County location.',
-    services: ['air-conditioning-repair', 'hvac-repair', 'furnace-repair', 'hvac-maintenance'],
+    services: ['ac-repair', 'hvac-repair', 'furnace-repair', 'hvac-maintenance'],
   },
   {
     slug: 'lake-bluff-il',
@@ -1154,7 +1154,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'Just minutes down the road from our Waukegan facility, AColeman Heating and Cooling delivers thorough heating repair, furnace tune-ups, and air conditioning service to homes throughout Lake Bluff, IL.',
-    services: ['heating-repair', 'furnace-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+    services: ['ac-repair', 'heating-repair', 'furnace-repair', 'hvac-maintenance'],
   },
   {
     slug: 'round-lake-il',
@@ -1162,7 +1162,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'Serving Round Lake and western Lake County communities with skilled HVAC repairs, furnace service, and air conditioning replacements dispatched reliably from our Waukegan home base.',
-    services: ['hvac-repair', 'furnace-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+    services: ['ac-repair', 'hvac-repair', 'furnace-repair', 'hvac-maintenance'],
   },
   {
     slug: 'park-city-il',
@@ -1170,7 +1170,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'Bordering Waukegan right along Dugdale Rd and Belvidere Rd, Park City is minutes from our primary shop, providing homeowners with rapid response times for heating and cooling repairs.',
-    services: ['hvac-repair', 'furnace-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+    services: ['ac-repair', 'hvac-repair', 'furnace-repair', 'hvac-maintenance'],
   },
   {
     slug: 'gages-lake-il',
@@ -1178,7 +1178,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'Serving Gages Lake residential homes with trusted heating repair, AC maintenance, and high-efficiency system replacements dispatched directly from our Waukegan team.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance', 'furnace-repair'],
+    services: ['ac-repair', 'heating-repair', 'hvac-maintenance', 'furnace-repair'],
   },
   {
     slug: 'grandwood-park-il',
@@ -1186,7 +1186,7 @@ export const LOCATIONS: LocationItem[] = [
     state: 'IL',
     description:
       'Providing Grandwood Park families with thorough heating diagnostics, furnace repair, and energy-efficient cooling installations dispatched from our nearby Waukegan headquarters.',
-    services: ['hvac-repair', 'furnace-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+    services: ['ac-repair', 'hvac-repair', 'furnace-repair', 'hvac-maintenance'],
   },
 ];
 
