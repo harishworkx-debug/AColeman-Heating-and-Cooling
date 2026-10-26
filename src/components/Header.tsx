@@ -18,7 +18,7 @@ import {
 import { BUSINESS, SERVICES, LOCATIONS } from '@/data/business';
 
 const serviceLinks = SERVICES.map((s) => ({
-  to: `/${s.slug}`,
+  to: `/${s.slug}-waukegan-il`,
   label: s.shortName,
   icon: s.icon,
 }));

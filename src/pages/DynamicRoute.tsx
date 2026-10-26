@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import ServiceDetail from '@/pages/ServiceDetail';
 import LocationDetail from '@/pages/LocationDetail';
 import LocationServiceDetail from '@/pages/LocationServiceDetail';
@@ -7,15 +7,15 @@ import { SERVICES, LOCATIONS } from '@/data/business';
 
 const SERVICE_ALIASES: Record<string, string> = {
   // Variations & high-intent aliases
-  'ac-repair': 'air-conditioning-repair',
+  'air-conditioning-repair': 'ac-repair',
   'furnace-service': 'furnace-repair',
   'air-conditioning-installation': 'ac-installation',
   // Priority 3 & Blog: Informational and problem-based query aliases
   'furnace-blowing-cold-air': 'furnace-repair',
   'why-is-my-furnace-blowing-cold-air': 'furnace-repair',
-  'ac-running-but-not-cooling': 'air-conditioning-repair',
-  'ac-running-not-cooling': 'air-conditioning-repair',
-  'why-is-my-ac-running-but-not-cooling': 'air-conditioning-repair',
+  'ac-running-but-not-cooling': 'ac-repair',
+  'ac-running-not-cooling': 'ac-repair',
+  'why-is-my-ac-running-but-not-cooling': 'ac-repair',
   'when-to-replace-a-furnace': 'furnace-installation',
   'when-should-you-replace-your-furnace': 'furnace-installation',
   'signs-you-need-a-new-furnace': 'furnace-installation',
@@ -53,21 +53,7 @@ export default function DynamicRoute() {
 
   if (!slug) return <NotFound />;
 
-  // 1. Is it a Service or alias?
-  const resolvedSlug = resolveServiceSlug(slug);
-  const service = SERVICES.find((s) => s.slug === slug || s.slug === resolvedSlug);
-  if (service) {
-    return <ServiceDetail resolvedSlug={service.slug} />;
-  }
-
-  // 2. Is it a Location?
-  const location = LOCATIONS.find((l) => l.slug === slug);
-  if (location) {
-    return <LocationDetail resolvedSlug={slug} />;
-  }
-
-  // 3. Is it a LocationService?
-  // We can try to split the slug and see if it matches a service + location
+  // 1. Is it a LocationService? (e.g. ac-installation-waukegan-il)
   for (const l of LOCATIONS) {
     if (slug.endsWith(`-${l.slug}`)) {
       const possibleServiceSlug = slug.slice(0, -(l.slug.length + 1));
@@ -77,6 +63,20 @@ export default function DynamicRoute() {
         return <LocationServiceDetail resolvedLocationSlug={l.slug} resolvedServiceSlug={s.slug} />;
       }
     }
+  }
+
+  // 2. Is it a Location Hub? (e.g. waukegan-il, gurnee-il)
+  const location = LOCATIONS.find((l) => l.slug === slug);
+  if (location) {
+    return <LocationDetail resolvedSlug={slug} />;
+  }
+
+  // 3. Is it a bare Service or alias? (e.g. ac-installation)
+  // Redirect directly to the primary main location URL (e.g. /ac-installation-waukegan-il)
+  const resolvedSlug = resolveServiceSlug(slug);
+  const service = SERVICES.find((s) => s.slug === slug || s.slug === resolvedSlug);
+  if (service) {
+    return <Navigate to={`/${service.slug}-waukegan-il`} replace />;
   }
 
   return <NotFound />;

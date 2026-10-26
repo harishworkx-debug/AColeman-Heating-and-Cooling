@@ -474,7 +474,7 @@ export const SERVICES: ServiceItem[] = [
     ],
   },
   {
-    slug: 'air-conditioning-repair',
+    slug: 'ac-repair',
     name: 'Air Conditioning Repair',
     shortName: 'AC Repair',
     category: 'Cooling',
@@ -1058,7 +1058,7 @@ export const SERVICE_CATEGORIES = [
     name: 'Cooling',
     icon: 'Snowflake',
     color: 'coolblue',
-    services: ['air-conditioning-repair', 'ac-installation'],
+    services: ['ac-repair', 'ac-installation'],
   },
   {
     name: 'HVAC',

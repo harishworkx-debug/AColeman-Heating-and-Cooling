@@ -294,14 +294,14 @@ export default function Home() {
               </h3>
               <p className="text-navy-600 leading-relaxed mb-6 flex-grow">
                 An air conditioner that runs without cooling, has weak airflow, or develops unusual operating symptoms may need inspection. Explore{' '}
-                <Link to="/air-conditioning-repair-waukegan-il" className="text-coolblue-600 font-semibold underline hover:text-coolblue-800">
+                <Link to="/ac-repair-waukegan-il" className="text-coolblue-600 font-semibold underline hover:text-coolblue-800">
                   air conditioning repair
                 </Link>{' '}
                 services and discuss the issue with our team.
               </p>
               <div className="pt-4 border-t border-gray-200/60">
                 <Link
-                  to="/air-conditioning-repair-waukegan-il"
+                  to="/ac-repair-waukegan-il"
                   className="inline-flex items-center gap-1.5 text-coolblue-700 font-semibold text-sm hover:gap-2.5 transition-all"
                 >
                   Explore AC Repair
@@ -504,7 +504,7 @@ export default function Home() {
                 ))}
               </div>
               <Link
-                to="/air-conditioning-repair-waukegan-il"
+                to="/ac-repair-waukegan-il"
                 className="inline-flex items-center gap-2 bg-coolblue-600 text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-coolblue-700 transition-all duration-300 shadow-lg shadow-coolblue-600/25 hover:-translate-y-0.5"
               >
                 Get AC Service

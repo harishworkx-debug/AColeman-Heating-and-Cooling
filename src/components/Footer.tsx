@@ -11,7 +11,7 @@ import {
 import { BUSINESS, SERVICES, LOCATIONS } from '@/data/business';
 
 const footerServices = SERVICES.map((s) => ({
-  to: `/${s.slug}`,
+  to: `/${s.slug}-waukegan-il`,
   label: s.shortName,
 }));
 

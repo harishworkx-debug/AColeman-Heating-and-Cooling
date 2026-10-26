@@ -30,7 +30,6 @@ const urls = [
     '/faqs'
 ];
 
-for (const s of sSlugs) urls.push('/' + s);
 for (const l of lSlugs) urls.push('/' + l);
 
 for (const s of sSlugs) {
@@ -54,13 +53,28 @@ const problemGuides = [
 
 for (const p of problemGuides) urls.push(p);
 
+const today = new Date().toISOString().split('T')[0];
+
+function getPriority(url) {
+  if (url === '/') return { priority: '1.0', changefreq: 'daily' };
+  if (url === '/services' || url === '/contact' || url === '/service-areas') return { priority: '0.9', changefreq: 'weekly' };
+  if (url.endsWith('-waukegan-il')) return { priority: '0.9', changefreq: 'weekly' };
+  if (url.includes('-')) return { priority: '0.8', changefreq: 'weekly' };
+  if (url === '/about' || url === '/faqs') return { priority: '0.7', changefreq: 'monthly' };
+  return { priority: '0.7', changefreq: 'monthly' };
+}
+
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
 for (const url of urls) {
+    const meta = getPriority(url);
     xml += `
   <url>
     <loc>${DOMAIN}${url}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${meta.changefreq}</changefreq>
+    <priority>${meta.priority}</priority>
   </url>`;
 }
 xml += '\n</urlset>';
