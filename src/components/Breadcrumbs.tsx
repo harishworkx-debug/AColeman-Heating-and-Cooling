@@ -15,7 +15,7 @@ export default function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
       '@type': 'ListItem',
       position: i + 1,
       name: crumb.label,
-      item: crumb.path ? `https://acolemanhvac.com${crumb.path}` : undefined,
+      item: crumb.path ? `https://www.acolemanhvac.com${crumb.path}` : undefined,
     })),
   };
 

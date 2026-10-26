@@ -10,7 +10,7 @@ export const BUSINESS = {
   phoneLink: 'tel:+12245240749',
   email: 'info@acolemanhvac.com',
   hours: 'Monday - Friday: 8:00 AM - 5:00 PM (24/7 Emergency Service)',
-  website: 'https://acolemanhvac.com/',
+  website: 'https://www.acolemanhvac.com/',
   mapsLink: 'https://maps.app.goo.gl/8DXZ7qq5QuxvqXbSA',
   mapsEmbed:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.2872402293356!2d-87.86604088827738!3d42.336398971075035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f93b24877942d%3A0x98f471dcd7170030!2sAColeman%20Heating%20and%20Cooling!5m0!3m2!1sen!2sin!4v1791348234728!5m2!1sen!2sin',
@@ -68,6 +68,87 @@ export type ServiceItem = {
 };
 
 export const SERVICES: ServiceItem[] = [
+  {
+    slug: 'hvac-repair',
+    name: 'HVAC Repair',
+    shortName: 'HVAC Repair',
+    category: 'HVAC',
+    icon: 'Wrench',
+    image: IMAGES.techRepair,
+    alt: 'HVAC technician troubleshooting a heating and cooling system in Waukegan IL',
+    shortDescription:
+      'Fast, comprehensive HVAC repair for heating and air conditioning systems across Waukegan and Lake County.',
+    cta: 'Explore HVAC Repair',
+    titleTag: 'HVAC Repair in Waukegan, IL | AColeman Heating & Cooling',
+    metaDescription:
+      'Trusted HVAC repair in Waukegan, IL. AColeman Heating and Cooling repairs heating systems, furnaces, and AC units with accurate diagnostics. Call (224) 524-0749.',
+    h1: 'HVAC Repair in Waukegan, IL',
+    intro:
+      'When your climate control system fails, you need a dependable HVAC company that can diagnose the issue quickly and fix it right the first time. AColeman Heating and Cooling provides professional HVAC repair services for homes and businesses throughout Waukegan, IL. From heating repair and furnace service in the winter to AC repair and air conditioning troubleshooting in the summer, our experienced technicians pinpoint the breakdown and restore your indoor comfort.',
+    problems: [
+      'Complete loss of heating or cooling',
+      'System blowing lukewarm or incorrect temperature air',
+      'Unusual sounds such as grinding, buzzing, or clicking',
+      'Sudden spikes in monthly utility bills',
+      'Thermostat not communicating with heating or cooling units',
+      'Uneven temperatures from room to room',
+      'System short cycling or running non-stop',
+      'Tripped breakers or electrical issues at the HVAC unit',
+    ],
+    symptoms: [
+      {
+        title: 'System Fails to Turn On',
+        description:
+          'If your heating or cooling system will not start when the thermostat calls for it, the issue may involve electrical relays, capacitors, safety limit switches, or a blown fuse.',
+      },
+      {
+        title: 'Inadequate Temperature Control',
+        description:
+          'When airflow is weak or the air coming through your vents does not match your thermostat setting, our technicians inspect compressors, burners, blowers, and refrigerant circuits to restore full performance.',
+      },
+      {
+        title: 'Frequent Short Cycling',
+        description:
+          'A system that turns on and off rapidly places heavy stress on motors and compressors. We identify whether dirty sensors, overheating, or airflow restrictions are triggering early shutoffs.',
+      },
+      {
+        title: 'Strange Odors or Noises',
+        description:
+          'Persistent rattles, squeals, burning smells, or musty odors signal mechanical friction or combustion concerns that warrant prompt professional HVAC repair.',
+      },
+    ],
+    process: [
+      {
+        title: 'Contact',
+        description:
+          'Call (224) 524-0749 to describe your heating or cooling problem. We schedule a convenient diagnostic appointment with a local technician.',
+      },
+      {
+        title: 'Diagnose',
+        description:
+          'We inspect your heating and cooling equipment, test key mechanical and electrical parts, and explain the exact cause of the breakdown.',
+      },
+      {
+        title: 'Repair',
+        description:
+          'We complete the necessary repair using quality replacement parts, test system operation under full load, and verify even comfort throughout your home.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is included in an HVAC repair service visit?',
+        a: 'Our technician inspects electrical connections, refrigerant pressures, airflow, burner assemblies or compressors, and safety controls to find the root cause before completing the repair.',
+      },
+      {
+        q: 'How fast can you repair my heating or air conditioning system?',
+        a: 'We offer prompt dispatch throughout Waukegan and Lake County, with 24/7 emergency service available for severe heating outages during winter freezes or complete AC failures during summer heat waves.',
+      },
+      {
+        q: 'Should I repair my HVAC unit or replace it?',
+        a: 'If your system is under 10–12 years old and the repair cost is reasonable, repairing it is usually best. If it requires repeated repairs or has major component failure, we can discuss replacement options.',
+      },
+    ],
+  },
   {
     slug: 'heating-repair',
     name: 'Heating Repair',
@@ -312,6 +393,87 @@ export const SERVICES: ServiceItem[] = [
     ],
   },
   {
+    slug: 'furnace-installation',
+    name: 'Furnace Installation',
+    shortName: 'Furnace Installation',
+    category: 'Heating',
+    icon: 'Flame',
+    image: IMAGES.furnaceFlame,
+    alt: 'High-efficiency furnace installation in a residential basement in Waukegan IL',
+    shortDescription:
+      'Professional furnace installation and replacement in Waukegan, IL. Properly sized, high-efficiency heating systems engineered for Illinois winters.',
+    cta: 'Explore Furnace Installation',
+    titleTag: 'Furnace Installation & Replacement in Waukegan, IL | AColeman HVAC',
+    metaDescription:
+      'Reliable furnace installation and replacement in Waukegan, IL. AColeman Heating and Cooling installs high-efficiency gas furnaces sized for your home. Call (224) 524-0749.',
+    h1: 'Furnace Installation in Waukegan, IL',
+    intro:
+      'When Illinois winter temperatures drop below freezing, a reliable, high-efficiency furnace is vital for keeping your family warm and safe. AColeman Heating and Cooling delivers professional furnace installation and heating replacement throughout Waukegan, IL. We carefully size every furnace to your home\'s exact square footage and insulation, ensuring optimal energy savings, dependable warmth, and quiet operation.',
+    problems: [
+      'Existing furnace is over 15 years old and nearing the end of its lifespan',
+      'Cracked heat exchanger posing potential safety risks',
+      'Repeated furnace breakdowns leading to expensive service calls',
+      'Steadily escalating winter natural gas and electric bills',
+      'Furnace cannot maintain comfortable temperatures during deep freezes',
+      'Upgrading from an outdated unit to a modern high-efficiency heating system',
+      'New home construction or major remodel requiring dedicated heating equipment',
+      'Uneven heating leaving certain rooms cold and drafty',
+    ],
+    symptoms: [
+      {
+        title: 'Aging Heating Equipment',
+        description:
+          'Furnaces operating beyond 15 years lose efficiency and become prone to sudden breakdown. Replacing an aging unit prevents emergency winter outages.',
+      },
+      {
+        title: 'Spike in Heating Costs',
+        description:
+          'As older furnaces wear down, they burn more fuel to generate the same heat. Modern high-efficiency furnaces significantly reduce monthly winter utility bills.',
+      },
+      {
+        title: 'Persistent Cold Spots',
+        description:
+          'If your current heating unit fails to distribute warm air evenly across all rooms, an appropriately sized furnace installation ensures balanced comfort.',
+      },
+      {
+        title: 'Unusual Combustion or Odors',
+        description:
+          'Frequent pilot failures, yellow burner flames, or burner soot indicate combustion issues. A new furnace provides safe, clean, reliable warmth.',
+      },
+    ],
+    process: [
+      {
+        title: 'Home Heating Assessment',
+        description:
+          'We evaluate your home layout, insulation, and ductwork to calculate the precise heating load needed for dependable warmth.',
+      },
+      {
+        title: 'Equipment Recommendation',
+        description:
+          'We help you select the ideal high-efficiency gas furnace or heating unit tailored to your budget and efficiency goals.',
+      },
+      {
+        title: 'Safe Removal & Installation',
+        description:
+          'We safely remove your old unit, install the new furnace, connect venting and electrical lines, and verify safe combustion and airflow.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'How do I choose the right size furnace for my Waukegan home?',
+        a: 'We perform a heating load calculation considering square footage, ceiling height, insulation levels, and window efficiency to ensure your furnace is neither oversized nor undersized.',
+      },
+      {
+        q: 'How long does a new furnace installation take?',
+        a: 'Most standard furnace installations are completed in a single day, typically taking between 4 to 8 hours from removal of the old unit to complete startup testing.',
+      },
+      {
+        q: 'What efficiency rating should I look for in a new furnace?',
+        a: 'For Lake County and Northern Illinois winters, we recommend AFUE ratings of 90% or higher (high-efficiency condensing units) for substantial long-term fuel savings.',
+      },
+    ],
+  },
+  {
     slug: 'air-conditioning-repair',
     name: 'Air Conditioning Repair',
     shortName: 'AC Repair',
@@ -322,12 +484,12 @@ export const SERVICES: ServiceItem[] = [
     shortDescription:
       'AC repair for systems blowing warm air, not cooling properly, making noise, or not starting at all during the summer heat.',
     cta: 'Explore AC Repair',
-    titleTag: 'Air Conditioning Repair in Waukegan, IL | AColeman HVAC',
+    titleTag: 'AC Repair & Air Conditioning Repair in Waukegan, IL | AColeman HVAC',
     metaDescription:
-      'AC repair in Waukegan, IL. AColeman Heating and Cooling fixes air conditioners blowing warm air, short cycling, making noise, or not starting. Call (224) 524-0749.',
-    h1: 'Air Conditioning Repair in Waukegan, IL',
+      'AC repair and air conditioning repair in Waukegan, IL. AColeman Heating and Cooling fixes air conditioners blowing warm air, short cycling, or failing to start. Call (224) 524-0749.',
+    h1: 'AC & Air Conditioning Repair in Waukegan, IL',
     intro:
-      'A broken air conditioner during an Illinois summer makes your home uncomfortable quickly. AColeman Heating and Cooling provides air conditioning repair services that focus on identifying the specific problem affecting your cooling system. Whether your AC is blowing warm air, short cycling, or not starting at all, we work through the system to find and fix the issue.',
+      'A broken air conditioner during an Illinois summer makes your home uncomfortable quickly. AColeman Heating and Cooling provides air conditioning repair and emergency AC repair services that focus on identifying the specific problem affecting your cooling system. Whether your AC is blowing warm air, short cycling, or not starting at all, we work through the system to find and fix the issue.',
     problems: [
       'AC blowing warm air or not cooling the home',
       'Weak airflow from supply vents',
@@ -646,10 +808,10 @@ export const SERVICES: ServiceItem[] = [
     shortDescription:
       'Thermostat repair, replacement, and installation services to ensure accurate temperature control and proper communication with your HVAC system.',
     cta: 'Explore Thermostat Services',
-    titleTag: 'Thermostat Services in Waukegan, IL | AColeman HVAC',
+    titleTag: 'Thermostat Repair & Installation in Waukegan, IL | AColeman HVAC',
     metaDescription:
-      'Thermostat services in Waukegan, IL. AColeman Heating and Cooling repairs, replaces, and installs thermostats for accurate temperature control and HVAC communication. Call (224) 524-0749.',
-    h1: 'Thermostat Services in Waukegan, IL',
+      'Thermostat repair in Waukegan, IL. AColeman Heating and Cooling repairs, calibrates, and installs programmable and smart thermostats. Call (224) 524-0749.',
+    h1: 'Thermostat Repair & Services in Waukegan, IL',
     intro:
       'Your thermostat is the control center for your heating and cooling system. If it is not communicating correctly with your HVAC equipment, your system may not heat or cool properly, may short cycle, or may not respond at all. AColeman Heating and Cooling provides thermostat repair, replacement, and installation services to ensure accurate temperature control and reliable system operation.',
     problems: [
@@ -727,10 +889,10 @@ export const SERVICES: ServiceItem[] = [
     shortDescription:
       'Complete HVAC system replacement services, removing old equipment and installing new heating and cooling systems sized and configured for your home.',
     cta: 'Explore HVAC Replacement',
-    titleTag: 'HVAC System Replacement in Waukegan, IL | AColeman HVAC',
+    titleTag: 'HVAC Replacement in Waukegan, IL | AColeman HVAC',
     metaDescription:
-      'HVAC system replacement in Waukegan, IL. AColeman Heating and Cooling removes old HVAC equipment and installs new, properly sized systems. Call (224) 524-0749.',
-    h1: 'HVAC System Replacement in Waukegan, IL',
+      'HVAC replacement and complete system installation in Waukegan, IL. AColeman Heating and Cooling removes old HVAC equipment and installs high-efficiency systems. Call (224) 524-0749.',
+    h1: 'HVAC Replacement in Waukegan, IL',
     intro:
       'When your heating and cooling system has reached the end of its useful life, a full HVAC system replacement may be the most practical option. AColeman Heating and Cooling provides complete system replacement services, from removing old equipment to installing new, properly sized systems. We focus on correct sizing, proper installation, and thorough testing so your new system provides reliable comfort for years to come.',
     problems: [
@@ -808,10 +970,10 @@ export const SERVICES: ServiceItem[] = [
     shortDescription:
       'Professional duct cleaning to remove dust, debris, and contaminants from your HVAC ductwork, improving airflow and indoor air quality.',
     cta: 'Explore Duct Cleaning',
-    titleTag: 'Duct Cleaning in Waukegan, IL | AColeman HVAC',
+    titleTag: 'Air Duct Cleaning in Waukegan, IL | AColeman HVAC',
     metaDescription:
-      'Duct cleaning in Waukegan, IL. AColeman Heating and Cooling cleans HVAC ductwork to improve airflow and indoor air quality. Call (224) 524-0749.',
-    h1: 'Duct Cleaning in Waukegan, IL',
+      'Professional air duct cleaning in Waukegan, IL. AColeman Heating and Cooling cleans HVAC ductwork to improve airflow and indoor air quality. Call (224) 524-0749.',
+    h1: 'Air Duct Cleaning in Waukegan, IL',
     intro:
       'Over time, dust, pollen, pet dander, and other contaminants accumulate inside your HVAC ductwork. AColeman Heating and Cooling provides professional duct cleaning services that remove buildup from your duct system, helping your heating and cooling system operate more efficiently and improving the air quality in your home. Whether you have noticed reduced airflow, visible dust around your vents, or simply want a cleaner system, our duct cleaning service addresses the problem thoroughly.',
     problems: [
@@ -885,7 +1047,12 @@ export const SERVICE_CATEGORIES = [
     name: 'Heating',
     icon: 'Flame',
     color: 'warmorange',
-    services: ['heating-repair', 'furnace-repair', 'heating-installation'],
+    services: [
+      'heating-repair',
+      'furnace-repair',
+      'heating-installation',
+      'furnace-installation',
+    ],
   },
   {
     name: 'Cooling',
@@ -898,6 +1065,7 @@ export const SERVICE_CATEGORIES = [
     icon: 'Wrench',
     color: 'navy',
     services: [
+      'hvac-repair',
       'hvac-maintenance',
       'hvac-diagnostics',
       'thermostat-services',
@@ -921,105 +1089,105 @@ export const LOCATIONS: LocationItem[] = [
     name: 'Waukegan',
     state: 'IL',
     description:
-      'As a Waukegan-based heating contractor, AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Waukegan, Illinois and the surrounding communities. Our location on W Dugdale Rd means we are nearby when you need HVAC service.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
-  },
-  {
-    slug: 'north-chicago-il',
-    name: 'North Chicago',
-    state: 'IL',
-    description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in North Chicago, Illinois. Located just minutes from North Chicago, we respond quickly when you need reliable HVAC service.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+      'As a Waukegan-based heating and cooling contractor headquartered at 2409 W Dugdale Rd, AColeman Heating and Cooling provides fast, reliable HVAC repair, furnace repair, AC repair, and heating installation for homes and businesses throughout Waukegan, IL. Our central facility ensures rapid emergency response and trustworthy neighborhood service.',
+    services: ['heating-repair', 'furnace-repair', 'air-conditioning-repair', 'ac-installation', 'hvac-maintenance'],
   },
   {
     slug: 'gurnee-il',
     name: 'Gurnee',
     state: 'IL',
     description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Gurnee, Illinois. Whether you live near Gurnee Mills or in a residential neighborhood, we are nearby when you need HVAC service.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+      'Centrally dispatched from our nearby Waukegan facility, AColeman Heating and Cooling provides prompt HVAC repair, furnace repair, and air conditioning service throughout Gurnee, IL. Whether your home is near Gurnee Mills, along Grand Avenue, or in an established neighborhood, our mobile technicians deliver dependable heating and cooling care.',
+    services: ['hvac-repair', 'furnace-repair', 'air-conditioning-repair', 'hvac-maintenance'],
   },
   {
-    slug: 'lake-forest-il',
-    name: 'Lake Forest',
+    slug: 'north-chicago-il',
+    name: 'North Chicago',
     state: 'IL',
     description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Lake Forest, Illinois. We serve the Lake Forest community with reliable HVAC repair and installation.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+      'Located directly adjacent to North Chicago, AColeman Heating and Cooling dispatches quickly from our Waukegan headquarters to provide expert AC repair, furnace troubleshooting, and preventive HVAC maintenance for homes and facilities across North Chicago, IL.',
+    services: ['air-conditioning-repair', 'hvac-maintenance', 'furnace-repair', 'heating-repair'],
   },
   {
     slug: 'libertyville-il',
     name: 'Libertyville',
     state: 'IL',
     description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Libertyville, Illinois. Our technicians are familiar with the homes in Libertyville and respond promptly to HVAC service calls.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+      'AColeman Heating and Cooling serves Libertyville, IL with professional HVAC repair, AC installation, and heating diagnostics dispatched directly from our nearby Waukegan shop. We deliver transparent pricing, careful equipment sizing, and long-lasting climate comfort for Libertyville residences.',
+    services: ['hvac-repair', 'ac-installation', 'furnace-repair', 'hvac-system-replacement'],
   },
   {
-    slug: 'round-lake-il',
-    name: 'Round Lake',
+    slug: 'lake-forest-il',
+    name: 'Lake Forest',
     state: 'IL',
     description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Round Lake, Illinois. We are a short drive away and ready to help with any heating or cooling need.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+      'Providing Lake Forest, IL homeowners with precision furnace repair, air conditioning service, and complete HVAC system replacement. Dispatched promptly from our Waukegan base, our licensed technicians provide careful diagnostics and high-efficiency system installations.',
+    services: ['furnace-repair', 'hvac-system-replacement', 'air-conditioning-repair', 'hvac-maintenance'],
   },
   {
     slug: 'zion-il',
     name: 'Zion',
     state: 'IL',
     description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Zion, Illinois. We serve Zion and the surrounding area with dependable HVAC repair and installation.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
-  },
-  {
-    slug: 'park-city-il',
-    name: 'Park City',
-    state: 'IL',
-    description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Park City, Illinois. As a nearby Waukegan-based contractor, we reach Park City quickly for HVAC service calls.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+      'Serving our neighbors in Zion, IL, AColeman Heating and Cooling provides responsive HVAC repair, furnace diagnostics, and cooling maintenance. Dispatched directly from nearby Waukegan, we ensure your family stays comfortable through cold lakefront winters and humid summers.',
+    services: ['hvac-repair', 'furnace-repair', 'air-conditioning-repair', 'heating-installation'],
   },
   {
     slug: 'beach-park-il',
     name: 'Beach Park',
     state: 'IL',
     description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Beach Park, Illinois. We are located just minutes away and ready to respond to your heating and cooling needs.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+      'Situated just north of our Waukegan headquarters, Beach Park residents receive prompt mobile dispatch for emergency furnace repair, seasonal AC tune-ups, and heating system replacements from our experienced team.',
+    services: ['furnace-repair', 'hvac-repair', 'air-conditioning-repair', 'hvac-maintenance'],
   },
   {
     slug: 'highland-park-il',
     name: 'Highland Park',
     state: 'IL',
     description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Highland Park, Illinois. We serve the Highland Park community with professional HVAC repair, installation, and maintenance.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
-  },
-  {
-    slug: 'gages-lake-il',
-    name: 'Gages Lake',
-    state: 'IL',
-    description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes in Gages Lake, Illinois. We serve the Gages Lake community with dependable HVAC repair and installation.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+      'AColeman Heating and Cooling provides homeowners and light commercial properties in Highland Park, IL with dependable AC repair, furnace servicing, and proactive HVAC maintenance dispatched conveniently from our central Lake County location.',
+    services: ['air-conditioning-repair', 'hvac-repair', 'furnace-repair', 'hvac-maintenance'],
   },
   {
     slug: 'lake-bluff-il',
     name: 'Lake Bluff',
     state: 'IL',
     description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Lake Bluff, Illinois. We are nearby and ready to respond to your heating and cooling needs.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+      'Just minutes down the road from our Waukegan facility, AColeman Heating and Cooling delivers thorough heating repair, furnace tune-ups, and air conditioning service to homes throughout Lake Bluff, IL.',
+    services: ['heating-repair', 'furnace-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+  },
+  {
+    slug: 'round-lake-il',
+    name: 'Round Lake',
+    state: 'IL',
+    description:
+      'Serving Round Lake and western Lake County communities with skilled HVAC repairs, furnace service, and air conditioning replacements dispatched reliably from our Waukegan home base.',
+    services: ['hvac-repair', 'furnace-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+  },
+  {
+    slug: 'park-city-il',
+    name: 'Park City',
+    state: 'IL',
+    description:
+      'Bordering Waukegan right along Dugdale Rd and Belvidere Rd, Park City is minutes from our primary shop, providing homeowners with rapid response times for heating and cooling repairs.',
+    services: ['hvac-repair', 'furnace-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+  },
+  {
+    slug: 'gages-lake-il',
+    name: 'Gages Lake',
+    state: 'IL',
+    description:
+      'Serving Gages Lake residential homes with trusted heating repair, AC maintenance, and high-efficiency system replacements dispatched directly from our Waukegan team.',
+    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance', 'furnace-repair'],
   },
   {
     slug: 'grandwood-park-il',
     name: 'Grandwood Park',
     state: 'IL',
     description:
-      'AColeman Heating and Cooling provides heating repair, AC repair, installation, and HVAC maintenance services to homes and businesses in Grandwood Park, Illinois. Our technicians are familiar with the area and respond promptly to HVAC service calls.',
-    services: ['heating-repair', 'air-conditioning-repair', 'hvac-maintenance'],
-  }
+      'Providing Grandwood Park families with thorough heating diagnostics, furnace repair, and energy-efficient cooling installations dispatched from our nearby Waukegan headquarters.',
+    services: ['hvac-repair', 'furnace-repair', 'air-conditioning-repair', 'hvac-maintenance'],
+  },
 ];
 
 export type FAQItem = {

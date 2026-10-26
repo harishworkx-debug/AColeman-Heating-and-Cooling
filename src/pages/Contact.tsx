@@ -84,7 +84,7 @@ export default function Contact() {
         structuredData={{
           '@type': 'ContactPage',
           name: `Contact ${BUSINESS.name}`,
-          url: 'https://acolemanhvac.com/contact',
+          url: 'https://www.acolemanhvac.com/contact',
         }}
       />
 

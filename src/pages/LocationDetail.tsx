@@ -171,7 +171,7 @@ export default function LocationDetail({ resolvedSlug }: { resolvedSlug?: string
                 </p>
               ) : (
                 <p className="text-navy-600 leading-relaxed mb-4">
-                  As a locally owned and operated HVAC contractor, we understand the specific heating and cooling challenges homes face in {location.name}, {location.state}.
+                  As a locally owned and operated HVAC contractor dispatched from our primary facility in Waukegan, we understand the specific heating and cooling challenges homes face in {location.name}, {location.state}.
                 </p>
               )}
               <ul className="space-y-3">

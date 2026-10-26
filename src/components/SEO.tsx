@@ -18,7 +18,7 @@ export default function SEO({
   noindex = false,
   structuredData,
 }: SEOProps) {
-  const canonical = `https://acolemanhvac.com${canonicalPath}`;
+  const canonical = `https://www.acolemanhvac.com${canonicalPath}`;
   const image = ogImage || 'https://images.pexels.com/photos/5463581/pexels-photo-5463581.jpeg?auto=compress&cs=tinysrgb&w=1200';
 
   const defaultLocalBusinessSchema = {
@@ -26,8 +26,8 @@ export default function SEO({
     '@type': 'HVACBusiness',
     name: BUSINESS.name,
     image: image,
-    '@id': 'https://acolemanhvac.com',
-    url: 'https://acolemanhvac.com',
+    '@id': 'https://www.acolemanhvac.com',
+    url: 'https://www.acolemanhvac.com',
     telephone: BUSINESS.phone,
     priceRange: '$$',
     hasMap: BUSINESS.mapsLink,

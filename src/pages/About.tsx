@@ -57,7 +57,7 @@ export default function About() {
         structuredData={{
           '@type': 'AboutPage',
           name: `About ${BUSINESS.name}`,
-          url: `https://acolemanhvac.com/about`,
+          url: `https://www.acolemanhvac.com/about`,
         }}
       />
 

@@ -38,8 +38,8 @@ export default function FAQs() {
   return (
     <>
       <SEO
-        title="HVAC FAQs | AColeman Heating and Cooling - Waukegan, IL"
-        description="Frequently asked questions about heating repair, AC repair, furnace repair, HVAC maintenance, installation, thermostats, and scheduling service in Waukegan, IL."
+        title="HVAC Questions and Answers | AColeman Heating and Cooling - Waukegan, IL"
+        description="Get helpful answers to common HVAC questions and answers about heating repair, furnace service, AC repair, and maintenance in Waukegan, IL. Call (224) 524-0749."
         canonicalPath="/faqs"
         structuredData={faqStructuredData}
       />
@@ -51,10 +51,10 @@ export default function FAQs() {
           </div>
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-5 text-balance">
-              Frequently Asked Questions
+              HVAC Questions and Answers
             </h1>
             <p className="text-navy-200 text-lg leading-relaxed">
-              Answers to common questions about heating repair, AC repair, HVAC maintenance, installation, thermostats, and scheduling service with AColeman Heating and Cooling in Waukegan, IL.
+              Find reliable, straightforward HVAC questions and answers regarding heating repair, furnace troubleshooting, AC repair, preventive maintenance, and system installation in Waukegan, IL.
             </p>
           </div>
         </div>

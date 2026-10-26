@@ -10,12 +10,12 @@ export default function ServiceAreas() {
   return (
     <>
       <SEO
-        title="HVAC Service Areas | AColeman Heating and Cooling"
-        description="AColeman Heating and Cooling provides HVAC services in Waukegan, IL and surrounding communities. Heating repair, AC repair, installation, and maintenance. Call (224) 524-0749."
+        title="HVAC Service Areas in Waukegan IL | AColeman Heating and Cooling"
+        description="Explore the HVAC service areas in Waukegan, IL and 12 nearby communities served by AColeman Heating and Cooling. Reliable heating and AC repair. Call (224) 524-0749."
         canonicalPath="/service-areas"
         structuredData={{
           '@type': 'Service',
-          name: 'HVAC Service Areas',
+          name: 'HVAC Service Areas Waukegan IL',
           provider: { '@type': 'HVACBusiness', name: BUSINESS.name },
           areaServed: { '@type': 'City', name: 'Waukegan, IL' },
         }}
@@ -28,10 +28,10 @@ export default function ServiceAreas() {
           </div>
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-5 text-balance">
-              HVAC Service Areas
+              HVAC Service Areas in Waukegan, IL & Nearby Communities
             </h1>
             <p className="text-navy-200 text-lg leading-relaxed">
-              AColeman Heating and Cooling is based in Waukegan, Illinois and provides heating and cooling services to the surrounding communities. If you are in or near Waukegan and need HVAC service, give us a call.
+              AColeman Heating and Cooling is based in Waukegan, Illinois and provides professional heating and cooling services to 13 nearby communities. If you are in or near Waukegan and need HVAC repair or installation, give us a call at (224) 524-0749.
             </p>
           </div>
         </div>
@@ -50,7 +50,9 @@ export default function ServiceAreas() {
                     <h2 className="font-display font-bold text-xl text-navy-900">
                       {location.name}, {location.state}
                     </h2>
-                    <p className="text-sm text-navy-500">Primary Service Area</p>
+                    <p className="text-sm text-navy-500">
+                      {location.slug === 'waukegan-il' ? 'Primary Headquarters' : 'Dispatched Service Area'}
+                    </p>
                   </div>
                 </div>
                 <p className="text-navy-600 text-sm leading-relaxed mb-5">

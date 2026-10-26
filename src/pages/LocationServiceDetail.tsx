@@ -129,7 +129,9 @@ export default function LocationServiceDetail({
               {service.name} in {location.name}, {location.state}
             </h1>
             <p className="text-navy-200 text-lg leading-relaxed mb-8">
-              If you need {service.name.toLowerCase()} in {location.name}, {location.state}, AColeman Heating and Cooling is nearby and ready to help. {service.intro}
+              {location.slug === 'waukegan-il'
+                ? `Headquartered in Waukegan, IL at ${BUSINESS.address}, AColeman Heating and Cooling provides prompt, dependable ${service.name.toLowerCase()} for local homeowners and businesses. ${service.intro}`
+                : `Dispatched directly from our nearby headquarters on W Dugdale Rd in Waukegan, AColeman Heating and Cooling genuinely serves homeowners and businesses in ${location.name}, ${location.state} with reliable ${service.name.toLowerCase()}. ${service.intro}`}
             </p>
             <div className="flex flex-wrap gap-4">
               <CallCTA variant="primary" size="lg" />
@@ -256,7 +258,7 @@ export default function LocationServiceDetail({
                 </p>
               ) : (
                 <p className="text-navy-600 leading-relaxed mb-4">
-                  As a local HVAC contractor, we understand the specific heating and cooling needs of homes in {location.name}, {location.state}.
+                  As a local HVAC contractor dispatched from nearby Waukegan, we provide dependable mobile response and understand the specific heating and cooling needs of homes in {location.name}, {location.state}.
                 </p>
               )}
               <ul className="space-y-3">

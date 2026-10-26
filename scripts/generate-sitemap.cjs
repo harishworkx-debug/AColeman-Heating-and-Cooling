@@ -19,7 +19,7 @@ if(locationsMatch) {
     for(const m of matches) lSlugs.push(m[1]);
 }
 
-const DOMAIN = 'https://acolemanhvac.com';
+const DOMAIN = 'https://www.acolemanhvac.com';
 
 const urls = [
     '/',
@@ -38,6 +38,21 @@ for (const s of sSlugs) {
         urls.push('/' + s + '-' + l);
     }
 }
+
+const problemGuides = [
+    '/why-is-my-furnace-blowing-cold-air',
+    '/why-is-my-ac-running-but-not-cooling',
+    '/when-should-you-replace-your-furnace',
+    '/how-often-should-hvac-systems-be-serviced',
+    '/common-thermostat-problems',
+    '/why-does-my-hvac-system-make-strange-noises',
+    '/furnace-repair-vs-replacement',
+    '/what-affects-the-cost-of-ac-installation',
+    '/signs-your-air-ducts-need-inspection',
+    '/how-to-prepare-your-hvac-system-for-winter-in-illinois'
+];
+
+for (const p of problemGuides) urls.push(p);
 
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
